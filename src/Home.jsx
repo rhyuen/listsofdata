@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Summary from "./Summary.jsx";
 import fileData from "./data/personaldata.json";
 import uuid from "uuid/v4";
 
@@ -43,16 +44,6 @@ class Home extends Component {
       <div>
         <div>
           <select
-            name="month"
-            value={this.state.month}
-            onChange={this.handleChange}
-          >
-            <option value="None">None</option>
-            {months.map(m => (
-              <option value={parseInt(m)}>{m}</option>
-            ))}
-          </select>
-          <select
             name="year"
             value={this.state.year}
             onChange={this.handleChange}
@@ -62,8 +53,18 @@ class Home extends Component {
               <option value={parseInt(yr)}>{yr}</option>
             ))}
           </select>
+          <select
+            name="month"
+            value={this.state.month}
+            onChange={this.handleChange}
+          >
+            <option value="None">None</option>
+            {months.map(m => (
+              <option value={parseInt(m)}>{m}</option>
+            ))}
+          </select>
         </div>
-        <div>summary</div>
+        <Summary data={this.state.subset} />
         <div>
           {subset
             .map(item => {
