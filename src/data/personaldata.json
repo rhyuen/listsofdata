@@ -1,5 +1,55 @@
 {
 	"me": [{
+			"day": 8,
+			"month": 6,
+			"year": 2018,
+			"pushups": [20, 10, 10]
+		}, {
+			"day": 11,
+			"month": 6,
+			"year": 2018,
+			"pushups": [30, 15, 20]
+		}, {
+			"day": 13,
+			"month": 6,
+			"year": 2018,
+			"pushups": [20, 10, 15]
+		}, {
+			"day": 15,
+			"month": 6,
+			"year": 2018,
+			"pushups": [10]
+		}, {
+			"day": 17,
+			"month": 6,
+			"year": 2018,
+			"pushups": [20]
+		}, {
+			"day": 18,
+			"month": 6,
+			"year": 2018,
+			"pushups": [21, 16, 23]
+		}, {
+			"day": 20,
+			"month": 6,
+			"year": 2018,
+			"pushups": [25, 15, 15]
+		}, {
+			"day": 23,
+			"month": 6,
+			"year": 2018,
+			"pushups": [15, 15, 15]
+		}, {
+			"day": 26,
+			"month": 6,
+			"year": 2018,
+			"pushups": [11, 10, 15, 10]
+		}, {
+			"day": 29,
+			"month": 6,
+			"year": 2018,
+			"pushups": [25, 15, 15, 19]
+		}, {
 			"day": 19,
 			"month": 11,
 			"year": 2018,
@@ -254,6 +304,12 @@
 			"month": 3,
 			"year": 2019,
 			"pushups": [30, 30, 15, 15]
+		},
+		{
+			"day": 6,
+			"month": 3,
+			"year": 2019,
+			"pushups": [35, 22, 22, 18, 9]
 		}
 
 	]
