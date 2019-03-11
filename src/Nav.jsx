@@ -7,6 +7,7 @@ const Home = () => {
   return (
     <RootNav>
       <Link to="/">Home</Link>
+      <Link to="/explore">Explore</Link>
       <Link to="/about">About</Link>
     </RootNav>
   );
