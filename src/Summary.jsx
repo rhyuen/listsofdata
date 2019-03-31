@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Card from "./Card.jsx";
 import styled from "styled-components";
 
 const Summary = ({ data }) => {
@@ -11,7 +12,7 @@ const Summary = ({ data }) => {
   const listOfSetCounts = data.map(item => item.pushups.length);
 
   return (
-    <div>
+    <Card>
       <h1>Data Summary</h1>
       <p>Sessions: {frequency}</p>
       <p>Average/Session: {averageCount}</p>
@@ -20,7 +21,7 @@ const Summary = ({ data }) => {
       <p>Lowest Set Count: {Math.min(...listOfSetCounts)}</p>
       <p>Highest Set Count: {Math.max(...listOfSetCounts)}</p>
       <p>Total: {totalCount}</p>
-    </div>
+    </Card>
   );
 };
 
