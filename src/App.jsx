@@ -7,21 +7,34 @@ import About from "./About.jsx";
 import Explore from "./Explore.jsx";
 import Nav from "./Nav.jsx";
 
+const Root = styled.div`
+  width: 100%;
+`;
+
+const AppContainer = styled.section`
+  width: 100%;
+`;
+const RouteContainer = styled.section`
+  position: relative;
+  top: 5vh;
+  padding: 10px;
+  width: 100%;
+`;
 class App extends Component {
   render() {
     return (
-      <div className="root">
+      <Root>
         <HashRouter>
-          <div>
+          <AppContainer>
             <Nav />
-            <div>
+            <RouteContainer>
               <Route exact path="/" component={Home} />
               <Route exact path="/about" component={About} />
               <Route exact path="/explore" component={Explore} />
-            </div>
-          </div>
+            </RouteContainer>
+          </AppContainer>
         </HashRouter>
-      </div>
+      </Root>
     );
   }
 }

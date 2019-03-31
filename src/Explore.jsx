@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Summary from "./Summary.jsx";
 import fileData from "./data/personaldata.json";
 import uuid from "uuid/v4";
+import Card from "./Card.jsx";
+import Row from "./Row.jsx";
 
 class Explore extends Component {
   state = {
@@ -42,7 +44,8 @@ class Explore extends Component {
     const years = [...new Set(data.map(item => item.year))];
     return (
       <div>
-        <div>
+        <Card>
+          <h1>Filters</h1>
           <select
             name="year"
             value={this.state.year}
@@ -63,13 +66,13 @@ class Explore extends Component {
               <option value={parseInt(m)}>{m}</option>
             ))}
           </select>
-        </div>
+        </Card>
         <Summary data={this.state.subset} />
-        <div>
+        <Card>
           {subset
             .map(item => {
               return (
-                <div key={uuid()}>
+                <Row key={uuid()}>
                   <span>
                     <span>{item.month}</span>/<span>{item.day}</span>/
                     <span>{item.year.toString().slice(2)} &nbsp;</span>
@@ -77,11 +80,11 @@ class Explore extends Component {
                   <span>{item.pushups.join(" ")}</span>
                   <span>&nbsp;{item.pushups.reduce((a, b) => a + b)}</span>
                   <br />
-                </div>
+                </Row>
               );
             })
             .reverse()}
-        </div>
+        </Card>
       </div>
     );
   }
