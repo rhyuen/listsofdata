@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import Card from "./Card.jsx";
+import Row from "./Row.jsx";
+import Cell from "./Cell.jsx";
 import styled from "styled-components";
 
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 const Summary = ({ data }) => {
   const frequency = data.length;
   const totalCount = data
@@ -14,13 +20,36 @@ const Summary = ({ data }) => {
   return (
     <Card>
       <h1>Data Summary</h1>
-      <p>Sessions: {frequency}</p>
-      <p>Average/Session: {averageCount}</p>
-      <p>Lowest Count: {Math.min(...listOfCounts)}</p>
-      <p>Highest Count: {Math.max(...listOfCounts)}</p>
-      <p>Lowest Set Count: {Math.min(...listOfSetCounts)}</p>
-      <p>Highest Set Count: {Math.max(...listOfSetCounts)}</p>
-      <p>Total: {totalCount}</p>
+      <Row>
+        <Column>
+          <Cell>Sessions</Cell>
+          <Cell>{frequency}</Cell>
+        </Column>
+        <Column>
+          <Cell>Average/Session</Cell>
+          <Cell>{averageCount}</Cell>
+        </Column>
+        <Column>
+          <Cell>Min Count</Cell> <Cell>{Math.min(...listOfCounts)}</Cell>
+        </Column>
+        <Column>
+          <Cell>Max Count</Cell>
+          <Cell>{Math.max(...listOfCounts)}</Cell>
+        </Column>
+        <Column>
+          <Cell>Min Set Count</Cell>
+          <Cell>{Math.min(...listOfSetCounts)}</Cell>
+        </Column>
+        <Column>
+          <Cell>Max Set Count</Cell>
+          <Cell>{Math.max(...listOfSetCounts)}</Cell>
+        </Column>
+        <Column>
+          <Cell>Total</Cell>
+          <Cell>{totalCount}</Cell>
+        </Column>
+      </Row>
+      <Row />
     </Card>
   );
 };

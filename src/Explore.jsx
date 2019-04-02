@@ -5,6 +5,7 @@ import fileData from "./data/personaldata.json";
 import uuid from "uuid/v4";
 import Card from "./Card.jsx";
 import Row from "./Row.jsx";
+import Cell from "./Cell.jsx";
 
 class Explore extends Component {
   state = {
@@ -73,12 +74,14 @@ class Explore extends Component {
             .map(item => {
               return (
                 <Row key={uuid()}>
-                  <span>
+                  <Cell>
                     <span>{item.month}</span>/<span>{item.day}</span>/
-                    <span>{item.year.toString().slice(2)} &nbsp;</span>
-                  </span>
-                  <span>{item.pushups.join(" ")}</span>
-                  <span>&nbsp;{item.pushups.reduce((a, b) => a + b)}</span>
+                    <span>{item.year.toString().slice(2)}</span>
+                  </Cell>
+                  {item.pushups.map(subitem => (
+                    <Cell>{subitem}</Cell>
+                  ))}
+                  <Cell>{item.pushups.reduce((a, b) => a + b)}</Cell>
                   <br />
                 </Row>
               );
