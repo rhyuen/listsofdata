@@ -43,6 +43,15 @@ class Explore extends Component {
     const { subset, data } = this.state;
     const months = [...new Set(data.map(item => item.month))];
     const years = [...new Set(data.map(item => item.year))];
+    let max = 0;
+    for (let i = 0; i < subset.length; i++) {
+      if (subset[i].pushups.length > max) {
+        max = subset[i].pushups.length;
+      }
+    }
+    const headerItems = Array(max)
+      .fill()
+      .map((_, i) => i);
     return (
       <div>
         <Card>
@@ -70,13 +79,22 @@ class Explore extends Component {
         </Card>
         <Summary data={this.state.subset} />
         <Card>
+          <Row>
+            <Cell>Date</Cell>
+            {headerItems.map(item => (
+              <Cell>Set {item + 1}</Cell>
+            ))}
+            <Cell>Total</Cell>
+          </Row>
           {subset
             .map(item => {
               return (
                 <Row key={uuid()}>
                   <Cell>
-                    <span>{item.month}</span>/<span>{item.day}</span>/
-                    <span>{item.year.toString().slice(2)}</span>
+                    <span>
+                      {item.month}/{item.day}
+                    </span>
+                    /<span>{item.year.toString().slice(2)}</span>
                   </Cell>
                   {item.pushups.map(subitem => (
                     <Cell>{subitem}</Cell>
