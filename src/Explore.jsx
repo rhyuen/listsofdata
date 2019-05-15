@@ -7,6 +7,18 @@ import Card from "./Card.jsx";
 import Row from "./Row.jsx";
 import Cell from "./Cell.jsx";
 
+const ExploreRoot = styled.section`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+`;
+
+const MainColumn = styled.main`
+  grid-column: 1 / span 9;
+`;
+const SideColumn = styled.aside`
+  grid-column: 10 / span 3;
+`;
+
 class Explore extends Component {
   state = {
     data: fileData.me,
@@ -53,60 +65,63 @@ class Explore extends Component {
       .fill()
       .map((_, i) => i);
     return (
-      <div>
-        <Card>
-          <h1>Filters</h1>
-          <select
-            name="year"
-            value={this.state.year}
-            onChange={this.handleChange}
-          >
-            <option value="None">None</option>
-            {years.map(yr => (
-              <option value={parseInt(yr)}>{yr}</option>
-            ))}
-          </select>
-          <select
-            name="month"
-            value={this.state.month}
-            onChange={this.handleChange}
-          >
-            <option value="None">None</option>
-            {months.map(m => (
-              <option value={parseInt(m)}>{m}</option>
-            ))}
-          </select>
-        </Card>
-        <Summary data={this.state.subset} />
-        <Card>
-          <Row>
-            <Cell>Date</Cell>
-            {headerItems.map(item => (
-              <Cell>Set {item + 1}</Cell>
-            ))}
-            <Cell>Total</Cell>
-          </Row>
-          {subset
-            .map(item => {
-              return (
-                <Row key={uuid()}>
-                  <Cell>
-                    <span>
-                      {item.month}/{item.day}
-                    </span>
-                    /<span>{item.year.toString().slice(2)}</span>
-                  </Cell>
-                  {item.pushups.map(subitem => (
-                    <Cell>{subitem}</Cell>
-                  ))}
-                  <Cell>{item.pushups.reduce((a, b) => a + b)}</Cell>
-                  <br />
-                </Row>
-              );
-            })
-            .reverse()}
-        </Card>
-      </div>
+      <ExploreRoot>
+        <MainColumn>
+          <Card>
+            <h1>Filters</h1>
+            <select
+              name="year"
+              value={this.state.year}
+              onChange={this.handleChange}
+            >
+              <option value="None">None</option>
+              {years.map(yr => (
+                <option value={parseInt(yr)}>{yr}</option>
+              ))}
+            </select>
+            <select
+              name="month"
+              value={this.state.month}
+              onChange={this.handleChange}
+            >
+              <option value="None">None</option>
+              {months.map(m => (
+                <option value={parseInt(m)}>{m}</option>
+              ))}
+            </select>
+          </Card>
+          <Summary data={this.state.subset} />
+          <Card>
+            <Row>
+              <Cell>Date</Cell>
+              {headerItems.map(item => (
+                <Cell>Set {item + 1}</Cell>
+              ))}
+              <Cell>Total</Cell>
+            </Row>
+            {subset
+              .map(item => {
+                return (
+                  <Row key={uuid()}>
+                    <Cell>
+                      <span>
+                        {item.month}/{item.day}
+                      </span>
+                      /<span>{item.year.toString().slice(2)}</span>
+                    </Cell>
+                    {item.pushups.map(subitem => (
+                      <Cell>{subitem}</Cell>
+                    ))}
+                    <Cell>{item.pushups.reduce((a, b) => a + b)}</Cell>
+                    <br />
+                  </Row>
+                );
+              })
+              .reverse()}
+          </Card>
+        </MainColumn>
+        <SideColumn>col 4 ad panel</SideColumn>
+      </ExploreRoot>
     );
   }
 }
