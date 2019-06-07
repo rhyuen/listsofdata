@@ -5,7 +5,7 @@ const Container = styled.div`
   margin: 20px 0;
   padding: 20px 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  border-radius: 5px;
 `;
 const Card = props => {
   return <Container>{props.children}</Container>;

@@ -20,36 +20,52 @@ const Summary = ({ data }) => {
   return (
     <Card>
       <h1>Data Summary</h1>
-      <Row>
+      <Row type="header" columns="7">
         <Column>
           <Cell>Sessions</Cell>
-          <Cell>{frequency}</Cell>
         </Column>
         <Column>
-          <Cell>Average/Session</Cell>
-          <Cell>{averageCount}</Cell>
+          <Cell>Avg/Session</Cell>
         </Column>
         <Column>
-          <Cell>Min Count</Cell> <Cell>{Math.min(...listOfCounts)}</Cell>
+          <Cell>Min Ct.</Cell>
         </Column>
         <Column>
-          <Cell>Max Count</Cell>
-          <Cell>{Math.max(...listOfCounts)}</Cell>
+          <Cell>Max Ct.</Cell>
         </Column>
         <Column>
-          <Cell>Min Set Count</Cell>
-          <Cell>{Math.min(...listOfSetCounts)}</Cell>
+          <Cell>Min Set Ct.</Cell>
         </Column>
         <Column>
-          <Cell>Max Set Count</Cell>
-          <Cell>{Math.max(...listOfSetCounts)}</Cell>
+          <Cell>Max Set Ct.</Cell>
         </Column>
         <Column>
           <Cell>Total</Cell>
+        </Column>
+      </Row>
+      <Row type="header" columns="7">
+        <Column>
+          <Cell>{frequency}</Cell>
+        </Column>
+        <Column>
+          <Cell>{averageCount}</Cell>
+        </Column>
+        <Column>
+          <Cell>{Math.min(...listOfCounts)}</Cell>
+        </Column>
+        <Column>
+          <Cell>{Math.max(...listOfCounts)}</Cell>
+        </Column>
+        <Column>
+          <Cell>{Math.min(...listOfSetCounts)}</Cell>
+        </Column>
+        <Column>
+          <Cell>{Math.max(...listOfSetCounts)}</Cell>
+        </Column>
+        <Column>
           <Cell>{totalCount}</Cell>
         </Column>
       </Row>
-      <Row />
     </Card>
   );
 };

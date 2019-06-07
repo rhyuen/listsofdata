@@ -33,7 +33,7 @@ const StyledLink = styled(Link)`
     color: black;
   }
   &:hover {
-    border-bottom: 3px solid blue;  
+    border-bottom: 3px solid black;  
 `;
 const Home = () => {
   return (
