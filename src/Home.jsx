@@ -1,12 +1,31 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import Card from "./Card.jsx";
 
 const Home = () => {
   return (
-    <Card>
-      <p>Just exploring some data. Move along.</p>
-    </Card>
+    <section>
+      <Card>
+        <h1>Styling Updates: June 6, 2019</h1>
+        <p>
+          Refactored some of the UI Components since I didn't realize I would
+          stick with this site/app. The 'Explore' component looked like a mess;
+          it still does. However, it looks a smidgen more tidier now.
+        </p>
+        <p>
+          I'm mainly working on this now because the router needs to be 'power
+          cycled' and I can't be bothered to get up. As such, I can only work on
+          stuff that's offline.
+        </p>
+      </Card>
+      <Card>
+        <h1>Counting things</h1>
+        <p>
+          Hi, I'm Robert and I am just doing some data entry and aggregation of
+          some data. There's no goal. It's just some busy work to see if
+          something more interesting can come as a result.
+        </p>
+      </Card>
+    </section>
   );
 };
 

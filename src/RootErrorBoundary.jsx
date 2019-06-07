@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Card from "./Card.jsx";
 
 export default class RootErrorBoundary extends Component {
   state = {
@@ -12,6 +13,14 @@ export default class RootErrorBoundary extends Component {
   render() {
     const { isError } = this.state;
     const { children } = this.props;
-    return isError ? <section>An error occurred.</section> : children;
+    return isError ? (
+      <Card>
+        <h1>Something unfortunate has happened on my end.</h1>
+        <p>An error occurred.</p>
+        <p>It's probably best to go back to the beginning.</p>
+      </Card>
+    ) : (
+      children
+    );
   }
 }

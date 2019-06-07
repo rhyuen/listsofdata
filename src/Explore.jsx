@@ -4,6 +4,8 @@ import Summary from "./Summary.jsx";
 import fileData from "./data/personaldata.json";
 import uuid from "uuid/v4";
 import Card from "./Card.jsx";
+import SideColumn from "./SideColumn.jsx";
+import Filters from "./Filters.jsx";
 import Row from "./Row.jsx";
 import Cell from "./Cell.jsx";
 
@@ -14,9 +16,6 @@ const ExploreRoot = styled.section`
 
 const MainColumn = styled.main`
   grid-column: 1 / span 9;
-`;
-const SideColumn = styled.aside`
-  grid-column: 10 / span 3;
 `;
 
 class Explore extends Component {
@@ -67,32 +66,16 @@ class Explore extends Component {
     return (
       <ExploreRoot>
         <MainColumn>
+          <Filters
+            years={years}
+            year={this.state.year}
+            month={this.state.month}
+            months={months}
+            onChange={this.handleChange}
+          />
+          <Summary data={subset} />
           <Card>
-            <h1>Filters</h1>
-            <select
-              name="year"
-              value={this.state.year}
-              onChange={this.handleChange}
-            >
-              <option value="None">None</option>
-              {years.map(yr => (
-                <option value={parseInt(yr)}>{yr}</option>
-              ))}
-            </select>
-            <select
-              name="month"
-              value={this.state.month}
-              onChange={this.handleChange}
-            >
-              <option value="None">None</option>
-              {months.map(m => (
-                <option value={parseInt(m)}>{m}</option>
-              ))}
-            </select>
-          </Card>
-          <Summary data={this.state.subset} />
-          <Card>
-            <Row>
+            <Row type="header">
               <Cell>Date</Cell>
               {headerItems.map(item => (
                 <Cell>Set {item + 1}</Cell>
@@ -102,7 +85,7 @@ class Explore extends Component {
             {subset
               .map(item => {
                 return (
-                  <Row key={uuid()}>
+                  <Row key={uuid()} type="content">
                     <Cell>
                       <span>
                         {item.month}/{item.day}
@@ -120,7 +103,7 @@ class Explore extends Component {
               .reverse()}
           </Card>
         </MainColumn>
-        <SideColumn>col 4 ad panel</SideColumn>
+        <SideColumn />
       </ExploreRoot>
     );
   }
