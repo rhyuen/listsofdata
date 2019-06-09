@@ -3,7 +3,11 @@ import Cardless from "./Cardless.jsx";
 import styled from "styled-components";
 
 const SideColumn = styled.aside`
-  grid-column: 10 / span 3;
+  display: none;
+  @media (min-width: 1024px) {
+    grid-column: 9 / span 4;
+    display: block;
+  }
 `;
 const ExportedSideColumn = () => {
   return (

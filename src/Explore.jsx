@@ -15,7 +15,17 @@ const ExploreRoot = styled.section`
 `;
 
 const MainColumn = styled.main`
-  grid-column: 1 / span 9;
+  @media (max-width: 768px) {
+    grid-column: 1 / span 12;
+  }
+
+  @media (max-width: 1023px) {
+    grid-column: 1 / span 12;
+  }
+
+  @media (min-width: 1024px) {
+    grid-column: 1 / span 8;
+  }
 `;
 
 class Explore extends Component {
