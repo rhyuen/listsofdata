@@ -96,17 +96,9 @@ class Explore extends Component {
               .map(item => {
                 return (
                   <Row key={uuid()} type="content">
-                    <Cell>
-                      <span>
-                        {item.month}/{item.day}
-                      </span>
-                      /<span>{item.year.toString().slice(2)}</span>
-                    </Cell>
-                    {item.pushups.map(subitem => (
-                      <Cell>{subitem}</Cell>
-                    ))}
+                    <DateCell replica={item} />
+                    <RowOfCells replicas={item.pushups} maxReplicas={max} />
                     <Cell>{item.pushups.reduce((a, b) => a + b)}</Cell>
-                    <br />
                   </Row>
                 );
               })
@@ -118,5 +110,27 @@ class Explore extends Component {
     );
   }
 }
+
+const DateCell = ({ replica }) => {
+  return (
+    <Cell>
+      {replica.month}/{replica.day}/{replica.year.toString().slice(2)}
+    </Cell>
+  );
+};
+
+const RowOfCells = ({ replicas, maxReplicas }) => {
+  let paddedReplicas = replicas;
+
+  let diffBetweenCurrAndMax = maxReplicas - replicas.length;
+  if (diffBetweenCurrAndMax > 0) {
+    for (let i = 0; i < diffBetweenCurrAndMax; i++) {
+      paddedReplicas.push("-");
+    }
+  }
+  return paddedReplicas.map(subitem => {
+    return <Cell key={uuid()}>{subitem}</Cell>;
+  });
+};
 
 export default Explore;

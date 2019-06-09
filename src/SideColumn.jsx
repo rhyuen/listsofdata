@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Cardless from "./Cardless.jsx";
 import styled from "styled-components";
+import Header from "./CardlessHeader.jsx";
 
 const SideColumn = styled.aside`
   display: none;
@@ -9,19 +10,20 @@ const SideColumn = styled.aside`
     display: block;
   }
 `;
+
 const ExportedSideColumn = () => {
   return (
     <SideColumn>
       <Cardless>
-        <h1>Recent Updates</h1>
+        <Header>Recent Updates</Header>
         <p>col 4 ad panel</p>
       </Cardless>
       <Cardless>
-        <h1>Other links</h1>
+        <Header>Other links</Header>
         <p>link one</p>
       </Cardless>
       <Cardless>
-        <h1>Subscribe</h1>
+        <Header>Subscribe</Header>
         <p>Email address entry</p>
       </Cardless>
     </SideColumn>
