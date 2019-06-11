@@ -120,17 +120,12 @@ const DateCell = ({ replica }) => {
 };
 
 const RowOfCells = ({ replicas, maxReplicas }) => {
-  let paddedReplicas = replicas;
-
   let diffBetweenCurrAndMax = maxReplicas - replicas.length;
-  if (diffBetweenCurrAndMax > 0) {
-    for (let i = 0; i < diffBetweenCurrAndMax; i++) {
-      paddedReplicas.push("-");
-    }
-  }
-  return paddedReplicas.map(subitem => {
-    return <Cell key={uuid()}>{subitem}</Cell>;
-  });
+  let paddedArray = new Array(diffBetweenCurrAndMax).fill("-");
+
+  const arr = replicas.concat(paddedArray);
+
+  return arr.map(subitem => <Cell key={uuid()}>{subitem}</Cell>);
 };
 
 export default Explore;
