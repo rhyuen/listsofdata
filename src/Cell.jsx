@@ -4,10 +4,10 @@ import styled from "styled-components";
 const Cell = styled.span`
   padding: 10px;
   text-align: left;
-  grid-column: span 1;
+  grid-column: span ${props => props.size};
 `;
-const ExportedCell = props => {
-  return <Cell>{props.children}</Cell>;
+const ExportedCell = ({ size = 1, children }) => {
+  return <Cell size={size}>{children}</Cell>;
 };
 
 export default ExportedCell;

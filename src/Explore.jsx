@@ -86,7 +86,7 @@ class Explore extends Component {
           <Summary data={subset} />
           <Card>
             <Row type="header">
-              <Cell>Date</Cell>
+              <Cell size="2">Date</Cell>
               {headerItems.map(item => (
                 <Cell>Set {item + 1}</Cell>
               ))}
@@ -113,7 +113,7 @@ class Explore extends Component {
 
 const DateCell = ({ replica }) => {
   return (
-    <Cell>
+    <Cell size="2">
       {replica.month}/{replica.day}/{replica.year.toString().slice(2)}
     </Cell>
   );
