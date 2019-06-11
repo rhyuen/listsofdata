@@ -23,7 +23,7 @@ const NavContainer = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;
-  margin-right: 1vw;
+  margin-right: 20px;
   height: 5vh;
   display: flex;
   flex-direction: column;

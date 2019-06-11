@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Row = styled.div`
   display: grid;
-  grid-template-columns: repeat(10, minmax(20px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
 
   &:hover {
     background: rgba(0, 0, 150, 0.1);
