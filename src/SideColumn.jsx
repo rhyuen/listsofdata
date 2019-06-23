@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import Cardless from "./Cardless.jsx";
 import styled from "styled-components";
-import Header from "./CardlessHeader.jsx";
+import RecentUpdates from "./RecentUpdates.jsx";
+import Subscribe from "./Subscribe.jsx";
+import SuggestedLinks from "./SuggestedLinks.jsx";
 
 const SideColumn = styled.aside`
   display: none;
@@ -14,18 +15,9 @@ const SideColumn = styled.aside`
 const ExportedSideColumn = () => {
   return (
     <SideColumn>
-      <Cardless>
-        <Header>Recent Updates</Header>
-        <p>col 4 ad panel</p>
-      </Cardless>
-      <Cardless>
-        <Header>Other links</Header>
-        <p>link one</p>
-      </Cardless>
-      <Cardless>
-        <Header>Subscribe</Header>
-        <p>Email address entry</p>
-      </Cardless>
+      <RecentUpdates />
+      <SuggestedLinks />
+      <Subscribe />
     </SideColumn>
   );
 };

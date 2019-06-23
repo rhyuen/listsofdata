@@ -88,7 +88,7 @@ class Explore extends Component {
             <Row type="header">
               <Cell size="2">Date</Cell>
               {headerItems.map(item => (
-                <Cell>Set {item + 1}</Cell>
+                <Cell key={uuid()}>Set {item + 1}</Cell>
               ))}
               <Cell>Total</Cell>
             </Row>

@@ -5,6 +5,14 @@ const Home = () => {
   return (
     <section>
       <Card>
+        <h1>Other Links: June 21, 2019</h1>
+        <p>
+          Added the 'Other Links' Side column portion to actually have links
+          that hit a service that I made. Sadly, the data duplicates itself
+          because that's all there is in the data store.
+        </p>
+      </Card>
+      <Card>
         <h1>Styling Updates: June 6, 2019</h1>
         <p>
           Refactored some of the UI Components since I didn't realize I would
