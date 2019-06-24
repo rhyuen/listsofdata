@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Cardless from "./Cardless.jsx";
 import Header from "./CardlessHeader.jsx";
+import TextInput from "./StyledTextInput.jsx";
+import Submit from "./StyledSubmit.jsx";
 import axios from "axios";
 
 class Subscribe extends Component {
@@ -30,13 +32,13 @@ class Subscribe extends Component {
         <Header>Subscribe</Header>
         <section>
           <form onSubmit={this.handleSubmit}>
-            <input
+            <TextInput
               type="text"
               name="email"
               onChange={this.handleTextChange}
               value={email}
             />
-            <input type="submit" />
+            <Submit />
           </form>
         </section>
       </Cardless>
