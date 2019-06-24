@@ -14,7 +14,7 @@ const ExportedSubtext = ({ limit = 140, children }) => {
   return (
     <Subtext>
       {children.length > limit
-        ? children.slice(0, 140).concat("...")
+        ? children.slice(0, limit).concat("...")
         : children}
     </Subtext>
   );

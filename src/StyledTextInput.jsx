@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Input = styled.input`
   border: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  color: black;
   margin-right: 10px;
 
   &:focus {
@@ -12,7 +13,7 @@ const Input = styled.input`
   }
 `;
 
-const ExportedInput = ({ props }) => {
+const ExportedInput = props => {
   return <Input {...props} />;
 };
 

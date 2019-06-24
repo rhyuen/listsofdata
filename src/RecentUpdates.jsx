@@ -43,12 +43,12 @@ class RecentUpdates extends Component {
             : data
                 .filter(item => item.type === "PushEvent")
                 .map(datum => {
-                  const { created_at, type } = datum;
+                  const { created_at } = datum;
                   const { display_login } = datum.actor;
                   const { message, url } = datum.payload.commits[0];
                   return (
                     <CardItem key={uuid()}>
-                      <Anchor href={url}>{display_login}</Anchor>
+                      <Anchor href={url}>UPDATE by {display_login}</Anchor>
                       <Subtext limit="50">{message}</Subtext>
                       <Subtext>{created_at.split("T")[0]}</Subtext>
                     </CardItem>
