@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import uuid from "uuid/v4";
 import styled from "styled-components";
 
 const Cell = styled.span`
