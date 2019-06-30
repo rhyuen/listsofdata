@@ -18,7 +18,7 @@ class SuggestedLinks extends Component {
       .get(url)
       .then(res => {
         this.setState({
-          data: res.data.result
+          data: res.data.result.slice(0, 5)
         });
       })
       .catch(e => {

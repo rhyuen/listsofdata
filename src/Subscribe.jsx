@@ -31,10 +31,23 @@ class Subscribe extends Component {
     e.preventDefault();
     const { email } = this.state;
     if (this.isEmailValid()) {
-      console.log(`${email} is the value in the form`);
-      this.setState({
-        email: ""
-      });
+      const emailURL =
+        "https://nodetwofaas.netlify.com/.netlify/functions/createEmail";
+      axios
+        .post(emailURL, { email: email })
+        .then(res => {
+          console.log("Email Submission Success");
+          console.log(res.data);
+        })
+        .catch(e => {
+          console.log("Errors abound.");
+          console.log(e);
+        })
+        .finally(() => {
+          this.setState({
+            email: ""
+          });
+        });
     } else {
       //TODO: Add caption that says invalid emaiul.
       console.log(
