@@ -34,7 +34,17 @@ class Subscribe extends Component {
       const emailURL =
         "https://nodetwofaas.netlify.com/.netlify/functions/createEmail";
       axios
-        .post(emailURL, { email: email })
+        .post(
+          emailURL,
+          { email: email },
+          {
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+              "Content-Type": "application/json"
+            },
+            withCredentials: true
+          }
+        )
         .then(res => {
           console.log("Email Submission Success");
           console.log(res.data);
