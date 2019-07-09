@@ -1,13 +1,17 @@
-import React, { Component } from "react";
-import Cardless from "./Cardless.jsx";
+import * as React from "react";
+import { Cardless } from "./Cardless";
 import uuid from "uuid/v4";
 import axios from "axios";
-import Header from "./CardlessHeader.jsx";
-import Anchor from "./StyledAnchor.jsx";
-import CardItem from "./CardItem.jsx";
-import Subtext from "./Subtext.jsx";
+import { CardlessHeader } from "./CardlessHeader";
+import { StyledAnchor } from "./StyledAnchor";
+import { CardItem } from "./CardItem";
+import { Subtext } from "./Subtext";
 
-class SuggestedLinks extends Component {
+interface State {
+  data: Array<object>;
+  loading: boolean;
+}
+export class SuggestedLinks extends React.Component<{}, State> {
   state = {
     data: [],
     loading: true
@@ -35,14 +39,14 @@ class SuggestedLinks extends Component {
     const { data, loading } = this.state;
     return (
       <Cardless>
-        <Header>Other links</Header>
+        <CardlessHeader>Other links</CardlessHeader>
         <section>
           {loading
             ? "Loading Links..."
-            : data.map(datum => {
+            : data.map((datum: any) => {
                 return (
                   <CardItem key={uuid()}>
-                    <Anchor href={datum.link}>{datum.title}</Anchor>
+                    <StyledAnchor href={datum.link}>{datum.title}</StyledAnchor>
                     <Subtext>{datum.subtitle}</Subtext>
                     <br />
                     <Subtext>{datum.source}</Subtext>
@@ -54,5 +58,3 @@ class SuggestedLinks extends Component {
     );
   }
 }
-
-export default SuggestedLinks;

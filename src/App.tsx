@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import * as React from "react";
 import { hot } from "react-hot-loader";
 import styled from "styled-components";
 import { HashRouter, Route } from "react-router-dom";
-import Home from "./Home.jsx";
-import About from "./About.jsx";
-import Explore from "./Explore.jsx";
-import Nav from "./Nav.jsx";
+import { Home } from "./Home";
+import { About } from "./About";
+import { Explore } from "./Explore";
+import { Nav } from "./Nav";
 
 const Root = styled.div`
   width: 100%;
@@ -20,7 +20,10 @@ const RouteContainer = styled.section`
   padding: 10px;
   width: 100%;
 `;
-class App extends Component {
+
+interface Props {}
+interface State {}
+export class App extends React.Component<Props, State> {
   render() {
     return (
       <Root>
@@ -39,4 +42,4 @@ class App extends Component {
   }
 }
 
-export default hot(module)(App);
+//export default hot(module)(App);

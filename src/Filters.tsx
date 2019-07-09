@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Card from "./Card.jsx";
+import * as React from "react";
+import { Card } from "./Card";
 import styled from "styled-components";
 
 const FilterContainer = styled.section`
@@ -9,8 +9,20 @@ const FilterLabel = styled.label`
   font-size: 16px;
 `;
 
-const ExportedFilters = props => {
-  const { year, years, month, months, onChange } = props;
+interface Props {
+  year: string;
+  years: Array<number>;
+  month: string;
+  months: Array<number>;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+}
+export const Filters: React.FunctionComponent<Props> = ({
+  year,
+  years,
+  month,
+  months,
+  onChange
+}) => {
   return (
     <Card>
       <h1>Filters</h1>
@@ -21,7 +33,7 @@ const ExportedFilters = props => {
           <select name="year" value={year} onChange={onChange}>
             <option value="None">None</option>
             {years.map(yr => (
-              <option value={parseInt(yr)}>{yr}</option>
+              <option value={yr}>{yr}</option>
             ))}
           </select>
         </div>
@@ -31,7 +43,7 @@ const ExportedFilters = props => {
           <select name="month" value={month} onChange={onChange}>
             <option value="None">None</option>
             {months.map(m => (
-              <option value={parseInt(m)}>{m}</option>
+              <option value={m}>{m}</option>
             ))}
           </select>
         </div>
@@ -39,5 +51,3 @@ const ExportedFilters = props => {
     </Card>
   );
 };
-
-export default ExportedFilters;

@@ -1,13 +1,17 @@
-import React, { Component } from "react";
-import Cardless from "./Cardless.jsx";
-import Header from "./CardlessHeader.jsx";
+import * as React from "react";
+import { Cardless } from "./Cardless";
+import { CardlessHeader } from "./CardlessHeader";
 import uuid from "uuid/v4";
 import axios from "axios";
-import CardItem from "./CardItem.jsx";
-import Anchor from "./StyledAnchor.jsx";
-import Subtext from "./Subtext.jsx";
+import { CardItem } from "./CardItem";
+import { StyledAnchor } from "./StyledAnchor";
+import { Subtext } from "./Subtext";
 
-class RecentUpdates extends Component {
+interface State {
+  data: Array<object>;
+  loading: boolean;
+}
+export class RecentUpdates extends React.Component<{}, State> {
   state = {
     data: [],
     loading: true
@@ -34,22 +38,39 @@ class RecentUpdates extends Component {
   }
   render() {
     const { loading, data } = this.state;
+
+    interface Item {
+      type: string;
+    }
+
+    interface Datum {
+      createdAt: string;
+      actor: {
+        display_login: string;
+      };
+      payload: {
+        commits: Array<object>;
+      };
+    }
+
     return (
       <Cardless>
-        <Header>Recent Updates</Header>
+        <CardlessHeader>Recent Updates</CardlessHeader>
         <section>
           {loading
             ? "Loading Links..."
             : data
-                .filter(item => item.type === "PushEvent")
-                .map(datum => {
+                .filter((item: Item) => item.type === "PushEvent")
+                .map((datum: any) => {
                   const { created_at } = datum;
                   const { display_login } = datum.actor;
                   const { message, url } = datum.payload.commits[0];
                   return (
                     <CardItem key={uuid()}>
-                      <Anchor href={url}>UPDATE by {display_login}</Anchor>
-                      <Subtext limit="50">{message}</Subtext>
+                      <StyledAnchor href={url}>
+                        UPDATE by {display_login}
+                      </StyledAnchor>
+                      <Subtext limit={50}>{message}</Subtext>
                       <Subtext>{created_at.split("T")[0]}</Subtext>
                     </CardItem>
                   );
@@ -60,5 +81,3 @@ class RecentUpdates extends Component {
     );
   }
 }
-
-export default RecentUpdates;

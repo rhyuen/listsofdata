@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Card from "./Card.jsx";
+import * as React from "react";
+import { Card } from "./Card";
 
-const About = () => {
+interface Props {}
+export const About: React.FunctionComponent<Props> = () => {
   return (
     <Card>
       <h1>About</h1>
@@ -13,5 +13,3 @@ const About = () => {
     </Card>
   );
 };
-
-export default About;

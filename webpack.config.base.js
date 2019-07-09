@@ -1,19 +1,25 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 
 module.exports = {
     entry: {
-        "index": path.join(__dirname, "src/Index.jsx")
+        "index": path.join(__dirname, "src/Index.tsx")
     },
     output: {
         path: path.join(__dirname, "dist"),
         filename: "bundle.js"
     },
+    resolve: {
+        extensions: [
+            "*", ".js", ".ts", ".jsx", ".tsx"
+        ]
+    },
     module: {
         rules: [{
-            test: /\.jsx$/,
+            test: /\.(tsx|ts|js|jsx)$/,
             exclude: /node_modules/,
             loader: "babel-loader",
         }, {
@@ -40,6 +46,7 @@ module.exports = {
         }], {
             debug: "debug",
             copyUnmodified: true
-        })
+        }),
+        new ForkTsCheckerWebpackPlugin()
     ]
 };

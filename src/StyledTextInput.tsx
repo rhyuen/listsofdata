@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 const Input = styled.input`
@@ -13,8 +13,14 @@ const Input = styled.input`
   }
 `;
 
-const ExportedInput = props => {
+interface Props {
+  type: string;
+  placeholder: string;
+  name: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  value: string;
+}
+
+export const StyledInput: React.FunctionComponent<Props> = props => {
   return <Input {...props} />;
 };
-
-export default ExportedInput;

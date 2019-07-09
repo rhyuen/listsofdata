@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Card from "./Card.jsx";
+import * as React from "react";
+import { Card } from "./Card";
 
-const Home = () => {
+export const Home: React.FunctionComponent<{}> = () => {
   return (
     <section>
       <Card>
@@ -36,5 +36,3 @@ const Home = () => {
     </section>
   );
 };
-
-export default Home;

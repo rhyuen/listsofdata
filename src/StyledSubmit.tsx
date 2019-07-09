@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 const Submit = styled.input`
@@ -18,7 +18,11 @@ const Submit = styled.input`
   }
 `;
 
-const ExportedSubmit = props => {
+interface Props {
+  type: string;
+  disabled: boolean;
+}
+export const StyledSubmit: React.FunctionComponent<Props> = props => {
   if (props.disabled === true) {
     const DisabledSubmit = styled(Submit)`
       background: grey;
@@ -28,5 +32,3 @@ const ExportedSubmit = props => {
     return <Submit {...props} />;
   }
 };
-
-export default ExportedSubmit;

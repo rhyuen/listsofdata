@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 const StyledHeader = styled.h1`
@@ -7,8 +7,9 @@ const StyledHeader = styled.h1`
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 `;
 
-const ExportedStyledHeader = ({ children }) => {
+interface Props {}
+export const CardlessHeader: React.FunctionComponent<Props> = ({
+  children
+}) => {
   return <StyledHeader>{children}</StyledHeader>;
 };
-
-export default ExportedStyledHeader;
