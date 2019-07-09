@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -7,8 +7,7 @@ const Container = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 `;
-const Card = props => {
+interface Props {}
+export const Card: React.FunctionComponent<Props> = props => {
   return <Container>{props.children}</Container>;
 };
-
-export default Card;

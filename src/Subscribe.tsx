@@ -1,18 +1,23 @@
 import React, { Component } from "react";
-import Cardless from "./Cardless.jsx";
-import Header from "./CardlessHeader.jsx";
-import TextInput from "./StyledTextInput.jsx";
-import Submit from "./StyledSubmit.jsx";
+import { Cardless } from "./Cardless";
+import { CardlessHeader } from "./CardlessHeader";
+import { StyledInput } from "./StyledTextInput";
+import { StyledSubmit } from "./StyledSubmit";
 import { isEmail } from "validator";
 import axios from "axios";
 
-class Subscribe extends Component {
+interface Props {}
+interface State {
+  email: string;
+  validEmail: boolean;
+}
+export class Subscribe extends React.Component<Props, State> {
   state = {
     email: "",
     validEmail: true
   };
 
-  handleTextChange = e => {
+  handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     if (isEmail(value)) {
       this.setState({
@@ -27,7 +32,7 @@ class Subscribe extends Component {
     }
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { email } = this.state;
     if (this.isEmailValid()) {
@@ -76,22 +81,20 @@ class Subscribe extends Component {
     const { email } = this.state;
     return (
       <Cardless>
-        <Header>Subscribe</Header>
+        <CardlessHeader>Subscribe</CardlessHeader>
         <section>
           <form onSubmit={this.handleSubmit}>
-            <TextInput
+            <StyledInput
               type="text"
               placeholder="email@myemail.ca"
               name="email"
               onChange={this.handleTextChange}
               value={email}
             />
-            <Submit type="submit" disabled={!this.state.validEmail} />
+            <StyledSubmit type="submit" disabled={!this.state.validEmail} />
           </form>
         </section>
       </Cardless>
     );
   }
 }
-
-export default Subscribe;

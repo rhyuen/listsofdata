@@ -1,21 +1,29 @@
-import React, { Component } from "react";
-import Card from "./Card.jsx";
-import Row from "./Row.jsx";
-import Cell from "./Cell.jsx";
+import * as React from "react";
+import { Card } from "./Card";
+import { Row } from "./Row";
+import { Cell } from "./Cell";
 import styled from "styled-components";
 
-const Column = styled.div`
+const Column: React.FunctionComponent = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const Summary = ({ data }) => {
-  const frequency = data.length;
-  const totalCount = data
-    .map(item => item.pushups.reduce((a, b) => a + b))
-    .reduce((c, d) => c + d);
-  const averageCount = Math.floor(totalCount / frequency);
-  const listOfCounts = data.map(item => item.pushups.reduce((a, b) => a + b));
-  const listOfSetCounts = data.map(item => item.pushups.length);
+interface Props {
+  data: Array<object>;
+}
+
+export const Summary: React.FunctionComponent<Props> = ({ data }) => {
+  const numOfArrayElements = data.length;
+  const pushupSumInAllArrayElements = data
+    .map((item: any) => item.pushups.reduce((a: number, b: number) => a + b))
+    .reduce((c: number, d: number) => c + d);
+  const averageCount = Math.floor(
+    pushupSumInAllArrayElements / numOfArrayElements
+  );
+  const listOfCounts = data.map((item: any) =>
+    item.pushups.reduce((a: number, b: number) => a + b)
+  );
+  const listOfSetCounts = data.map((item: any) => item.pushups.length);
 
   return (
     <Card>
@@ -45,7 +53,7 @@ const Summary = ({ data }) => {
       </Row>
       <Row type="header" columns="7">
         <Column>
-          <Cell>{frequency}</Cell>
+          <Cell>{numOfArrayElements}</Cell>
         </Column>
         <Column>
           <Cell>{averageCount}</Cell>
@@ -63,11 +71,9 @@ const Summary = ({ data }) => {
           <Cell>{Math.max(...listOfSetCounts)}</Cell>
         </Column>
         <Column>
-          <Cell>{totalCount}</Cell>
+          <Cell>{pushupSumInAllArrayElements}</Cell>
         </Column>
       </Row>
     </Card>
   );
 };
-
-export default Summary;

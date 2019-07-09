@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import * as React from "react";
 import styled from "styled-components";
 
-const Subtext = styled.p`
+const ReturnSubtext = styled.p`
   font-size: 14px;
   line-height: 1;
   color: #343434;
@@ -9,15 +9,19 @@ const Subtext = styled.p`
   margin: 0;
   cursor: pointer;
 `;
-
-const ExportedSubtext = ({ limit = 140, children }) => {
+interface Props {
+  limit?: number;
+  children: Array<string>;
+}
+export const Subtext: React.FunctionComponent<Props> = ({
+  limit = 140,
+  children
+}) => {
   return (
-    <Subtext>
+    <ReturnSubtext>
       {children.length > limit
         ? children.slice(0, limit).concat("...")
         : children}
-    </Subtext>
+    </ReturnSubtext>
   );
 };
-
-export default ExportedSubtext;

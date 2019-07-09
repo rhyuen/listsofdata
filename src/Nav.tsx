@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -35,7 +35,8 @@ const StyledLink = styled(Link)`
   &:hover {
     border-bottom: 3px solid black;  
 `;
-const Home = () => {
+
+export const Nav: React.FunctionComponent<{}> = () => {
   return (
     <RootNav>
       <NavContainer>
@@ -47,4 +48,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+//export default Home;

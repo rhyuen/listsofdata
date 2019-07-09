@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 const Anchor = styled.a`
@@ -12,8 +12,12 @@ const Anchor = styled.a`
   }
 `;
 
-const ExportedAnchor = ({ href, children }) => {
+interface Props {
+  href: string;
+}
+export const StyledAnchor: React.FunctionComponent<Props> = ({
+  href,
+  children
+}) => {
   return <Anchor href={href}>{children}</Anchor>;
 };
-
-export default ExportedAnchor;

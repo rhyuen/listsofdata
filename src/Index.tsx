@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import RootErrorBoundary from "./RootErrorBoundary.jsx";
-import App from "./App.jsx";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { RootErrorBoundary } from "./RootErrorBoundary";
+import { App } from "./App";
 
 if (process.env.NODE_ENV === "development") {
   const axe = require("react-axe");

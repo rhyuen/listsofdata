@@ -1,7 +1,10 @@
-import React, { Component } from "react";
-import Card from "./Card.jsx";
+import * as React from "react";
+import { Card } from "./Card";
 
-export default class RootErrorBoundary extends Component {
+interface State {
+  isError: boolean;
+}
+export class RootErrorBoundary extends React.Component<{}, State> {
   state = {
     isError: false
   };
