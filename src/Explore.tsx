@@ -107,11 +107,10 @@ export class Explore extends React.Component<{}, State> {
               <Cell>Total</Cell>
             </Row>
             {subset
-              .map(item => {
+              .map((item: Item) => {
                 return (
                   <Row key={uuid()} type="content">
-                    <DateCell replica={item} />
-                    <RowOfCells replicas={item.pushups} maxReplicas={max} />
+                    <RowOfCells replicas={item} maxReplicas={max} />
                   </Row>
                 );
               })
@@ -125,32 +124,34 @@ export class Explore extends React.Component<{}, State> {
 }
 
 interface DateCellProps {
-  replica: {
-    month: number;
-    day: number;
-    year: number;
-  };
+  month: number;
+  day: number;
+  year: number;
 }
-const DateCell: React.FunctionComponent<DateCellProps> = ({ replica }) => {
+const DateCell: React.FunctionComponent<DateCellProps> = ({
+  month,
+  day,
+  year
+}) => {
   return (
     <Cell size={2}>
-      {replica.month}/{replica.day}/{replica.year.toString().slice(2)}
+      {month}/{day}/{year.toString().slice(2)}
     </Cell>
   );
 };
 
 interface RowOfCellsProps {
-  replicas: Array<number>;
+  replicas: Item;
   maxReplicas: number;
 }
 const RowOfCells: React.FunctionComponent<RowOfCellsProps> = ({
-  maxReplicas,
-  replicas
+  replicas,
+  maxReplicas
 }) => {
-  let diffBetweenCurrAndMax = maxReplicas - replicas.length;
+  let diffBetweenCurrAndMax = maxReplicas - replicas.pushups.length;
   let paddedArray = new Array(diffBetweenCurrAndMax).fill("-");
 
-  const arr = replicas.map(rep => rep.toString()).concat(paddedArray);
+  const arr = replicas.pushups.map(rep => rep.toString()).concat(paddedArray);
 
   const Gtr = styled.div`
     display: grid;
@@ -159,10 +160,15 @@ const RowOfCells: React.FunctionComponent<RowOfCellsProps> = ({
 
   return (
     <Gtr>
+      <DateCell
+        month={replicas.month}
+        day={replicas.day}
+        year={replicas.year}
+      />
       {arr.map(subitem => (
         <Cell key={uuid()}>{subitem}</Cell>
       ))}
-      <Cell key={uuid()}>{replicas.reduce((a, b) => a + b)}</Cell>
+      <Cell key={uuid()}>{replicas.pushups.reduce((a, b) => a + b)}</Cell>
     </Gtr>
   );
 };
