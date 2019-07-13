@@ -1,10 +1,18 @@
-import * as React from "react";
+import React from "react";
 import { hot } from "react-hot-loader";
 import styled from "styled-components";
 import { HashRouter, Route } from "react-router-dom";
-import { Home } from "./Home";
-import { About } from "./About";
-import { Explore } from "./Explore";
+
+const Home = React.lazy(() =>
+  import("./Home").then(({ Home }) => ({ default: Home }))
+);
+const About = React.lazy(() =>
+  import("./About").then(({ About }) => ({ default: About }))
+);
+const Explore = React.lazy(() =>
+  import("./Explore").then(({ Explore }) => ({ default: Explore }))
+);
+
 import { Nav } from "./Nav";
 
 const Root = styled.div`
@@ -31,9 +39,11 @@ export class App extends React.Component<Props, State> {
           <AppContainer>
             <Nav />
             <RouteContainer>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/explore" component={Explore} />
+              <React.Suspense fallback={"Things are loading..."}>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/explore" component={Explore} />
+              </React.Suspense>
             </RouteContainer>
           </AppContainer>
         </HashRouter>
