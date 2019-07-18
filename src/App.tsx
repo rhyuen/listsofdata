@@ -1,6 +1,7 @@
 import React from "react";
 import { hot } from "react-hot-loader";
 import styled from "styled-components";
+import { LoadingIndicator } from "./LoadingIndicator";
 import { HashRouter, Route } from "react-router-dom";
 
 const Home = React.lazy(() =>
@@ -39,7 +40,7 @@ export class App extends React.Component<Props, State> {
           <AppContainer>
             <Nav />
             <RouteContainer>
-              <React.Suspense fallback={"Things are loading..."}>
+              <React.Suspense fallback={<LoadingIndicator message = "Just getting stuff going behind the scenes."/>}>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/explore" component={Explore} />

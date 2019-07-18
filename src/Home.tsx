@@ -5,6 +5,15 @@ export const Home: React.FunctionComponent<{}> = () => {
   return (
     <section>
       <Card>
+        <h1>Typescript and Code Splitting: July 12, 2019</h1>
+        <p>
+          I updated the code base to use Typescript. I had to use type 'any' for
+          some of the variables though. I also started using React.Suspense for
+          some of the components so that the initial download by users that
+          don't click on all of the routes is minimized.
+        </p>
+      </Card>
+      <Card>
         <h1>Other Links: June 21, 2019</h1>
         <p>
           Added the 'Other Links' Side column portion to actually have links

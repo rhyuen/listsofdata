@@ -107,7 +107,15 @@ export class Explore extends React.Component<{}, State> {
               <Cell>Total</Cell>
             </Row>
             {subset
-              .map((item: Item) => {
+              .map((item: Item, index: number) => {
+                if (
+                  index > 0 &&
+                  (subset[index - 1].month !== item.month ||
+                    subset[index - 1].year !== item.year)
+                ) {
+                  console.log("New Month goes here %s", subset[index].month);
+                }
+
                 return (
                   <Row key={uuid()} type="content">
                     <RowOfCells replicas={item} maxReplicas={max} />

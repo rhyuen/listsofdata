@@ -27,20 +27,30 @@ const StyledLink = styled(Link)`
   height: 5vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;  
+  justify-content: center;
   border-bottom: 3px solid transparent;
-  &:visited{
+  &:visited {
     color: black;
   }
   &:hover {
-    border-bottom: 3px solid black;  
+    border-bottom: 3px solid black;
+  }
+`;
+
+const HomeLink = styled(StyledLink)`
+  font-weight: bold;
+  font-size: 20px;
+
+  &:hover {
+    border-bottom: 3px solid transparent;
+  }
 `;
 
 export const Nav: React.FunctionComponent<{}> = () => {
   return (
     <RootNav>
       <NavContainer>
-        <StyledLink to="/">Home</StyledLink>
+        <HomeLink to="/">JustCounting</HomeLink>
         <StyledLink to="/explore">Explore</StyledLink>
         <StyledLink to="/about">About</StyledLink>
       </NavContainer>
