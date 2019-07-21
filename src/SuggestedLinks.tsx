@@ -17,7 +17,8 @@ export class SuggestedLinks extends React.Component<{}, State> {
     loading: true
   };
   componentDidMount() {
-    const url = "https://nodefaastwo.netlify.com/.netlify/functions/getLinks";
+    const url =
+      "https://nodefaastwo.netlify.com/.netlify/functions/getLinks?category=environment";
     axios
       .get(url)
       .then(res => {
