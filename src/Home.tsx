@@ -5,6 +5,19 @@ export const Home: React.FunctionComponent<{}> = () => {
   return (
     <section>
       <Card>
+        <h1>Added Sentry Logging: August 10, 2019</h1>
+        <p>
+          I added Sentry logging to the root of the application as well as the
+          Root Error boundary. I am, however, not entirely sure if it works.
+        </p>
+        <p>
+          Some things to add in the future are react-spring for the loading
+          animations. Cleaning up the css grid and removing some of the media
+          queries are also a concern. ChartJS for the data visualization is also
+          something that is in the cards.
+        </p>
+      </Card>
+      <Card>
         <h1>Typescript and Code Splitting: July 12, 2019</h1>
         <p>
           I updated the code base to use Typescript. I had to use type 'any' for
