@@ -886,6 +886,30 @@
       "month": 7,
       "year": 2019,
       "pushups": [35, 20, 15, 20]
+    },
+    {
+      "day": 29,
+      "month": 7,
+      "year": 2019,
+      "pushups": [30, 25, 20, 10]
+    },
+    {
+      "day": 31,
+      "month": 7,
+      "year": 2019,
+      "pushups": [35, 30, 25]
+    },
+    {
+      "day": 4,
+      "month": 8,
+      "year": 2019,
+      "pushups": [10]
+    },
+    {
+      "day": 8,
+      "month": 8,
+      "year": 2019,
+      "pushups": [25, 20, 10]
     }
   ]
 }
