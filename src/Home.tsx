@@ -1,9 +1,22 @@
 import * as React from "react";
+import styled from "styled-components";
 import { Card } from "./Card";
+
+const Slant = styled.div`
+  position: fixed;
+  left: 0;
+  top: -20px;
+  z-index: -1;
+  height: 500px;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.1);
+  transform: skewY(-4deg);
+`;
 
 export const Home: React.FunctionComponent<{}> = () => {
   return (
     <section>
+      <Slant></Slant>
       <Card>
         <h1>Added Sentry Logging: August 10, 2019</h1>
         <p>

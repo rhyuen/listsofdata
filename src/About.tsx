@@ -7,26 +7,38 @@ const Banner: React.FunctionComponent<{}> = styled.section`
   height: 50vh;
   background: black;
   font-weight: bolder;
-  font-size: 20px;
+  letter-spacing: 2px;
+  font-size: 25px;
+  position: fixed;
+  left: 0;
+  top: 5vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: white;  
 `;
 
-interface Props {}
+const PostBanner: React.FunctionComponent<{}> = styled.section`
+  position: relative;
+  top: 55vh;
+`;
+
+
+interface Props { }
 export const About: React.FunctionComponent<Props> = () => {
   return (
     <div>
       <Banner>JustCounting</Banner>
-      <Card>
-        <h1>About</h1>
-        <p>
-          Just counting some numbers over time so that it reduces the barrier to
-          entry for data visualization.
-        </p>
-      </Card>
+      <PostBanner>
+        <Card>
+          <h1>About</h1>
+          <p>
+            Just counting some numbers over time so that it reduces the barrier to
+            entry for data visualization.
+          </p>
+        </Card>
+      </PostBanner>
     </div>
   );
 };

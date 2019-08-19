@@ -9,6 +9,16 @@ import { Filters } from "./Filters";
 import { Row } from "./Row";
 import { Cell } from "./Cell";
 
+const Slant = styled.div`
+  position: fixed;
+  left: 0;
+  top: -20px;
+  z-index: -1;
+  height: 500px;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.1);
+  transform: skewY(-4deg);
+`;
 const ExploreRoot = styled.section`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -87,6 +97,7 @@ export class Explore extends React.Component<{}, State> {
 
     return (
       <ExploreRoot>
+        <Slant />
         <MainColumn>
           <Filters
             years={years}
