@@ -1,921 +1,1707 @@
 {
-  "me": [{
+  "me": [
+    {
       "day": 21,
       "month": 12,
       "year": 2017,
-      "pushups": [30, 20, 20, 10]
+      "pushups": [
+        30,
+        20,
+        20,
+        10
+      ]
     },
     {
       "day": 23,
       "month": 12,
       "year": 2017,
-      "pushups": [20, 15, 15]
+      "pushups": [
+        20,
+        15,
+        15
+      ]
     },
     {
       "day": 24,
       "month": 12,
       "year": 2017,
-      "pushups": [20, 20, 10]
+      "pushups": [
+        20,
+        20,
+        10
+      ]
     },
     {
       "day": 27,
       "month": 12,
       "year": 2017,
-      "pushups": [30]
+      "pushups": [
+        30
+      ]
     },
     {
       "day": 28,
       "month": 12,
       "year": 2017,
-      "pushups": [25, 15, 16]
+      "pushups": [
+        25,
+        15,
+        16
+      ]
     },
     {
       "day": 29,
       "month": 12,
       "year": 2017,
-      "pushups": [20, 15, 15]
+      "pushups": [
+        20,
+        15,
+        15
+      ]
     },
     {
       "day": 31,
       "month": 12,
       "year": 2017,
-      "pushups": [15, 15, 20, 15]
+      "pushups": [
+        15,
+        15,
+        20,
+        15
+      ]
     },
     {
       "day": 5,
       "month": 5,
       "year": 2018,
-      "pushups": [20, 15]
+      "pushups": [
+        20,
+        15
+      ]
     },
     {
       "day": 9,
       "month": 5,
       "year": 2018,
-      "pushups": [15, 10]
+      "pushups": [
+        15,
+        10
+      ]
     },
     {
       "day": 22,
       "month": 5,
       "year": 2018,
-      "pushups": [20, 15]
+      "pushups": [
+        20,
+        15
+      ]
     },
     {
       "day": 25,
       "month": 5,
       "year": 2018,
-      "pushups": [15, 10, 7]
+      "pushups": [
+        15,
+        10,
+        7
+      ]
     },
     {
       "day": 28,
       "month": 5,
       "year": 2018,
-      "pushups": [10, 15, 10]
+      "pushups": [
+        10,
+        15,
+        10
+      ]
     },
     {
       "day": 31,
       "month": 5,
       "year": 2018,
-      "pushups": [15, 15, 10]
+      "pushups": [
+        15,
+        15,
+        10
+      ]
     },
     {
       "day": 3,
       "month": 6,
       "year": 2018,
-      "pushups": [10, 6]
+      "pushups": [
+        10,
+        6
+      ]
     },
     {
       "day": 5,
       "month": 6,
       "year": 2018,
-      "pushups": [15, 15]
+      "pushups": [
+        15,
+        15
+      ]
     },
     {
       "day": 7,
       "month": 6,
       "year": 2018,
-      "pushups": [15, 20, 10]
+      "pushups": [
+        15,
+        20,
+        10
+      ]
     },
     {
       "day": 8,
       "month": 6,
       "year": 2018,
-      "pushups": [20, 10, 10]
+      "pushups": [
+        20,
+        10,
+        10
+      ]
     },
     {
       "day": 11,
       "month": 6,
       "year": 2018,
-      "pushups": [30, 15, 20]
+      "pushups": [
+        30,
+        15,
+        20
+      ]
     },
     {
       "day": 13,
       "month": 6,
       "year": 2018,
-      "pushups": [20, 10, 15]
+      "pushups": [
+        20,
+        10,
+        15
+      ]
     },
     {
       "day": 15,
       "month": 6,
       "year": 2018,
-      "pushups": [10]
+      "pushups": [
+        10
+      ]
     },
     {
       "day": 17,
       "month": 6,
       "year": 2018,
-      "pushups": [20]
+      "pushups": [
+        20
+      ]
     },
     {
       "day": 18,
       "month": 6,
       "year": 2018,
-      "pushups": [21, 16, 23]
+      "pushups": [
+        21,
+        16,
+        23
+      ]
     },
     {
       "day": 20,
       "month": 6,
       "year": 2018,
-      "pushups": [25, 15, 15]
+      "pushups": [
+        25,
+        15,
+        15
+      ]
     },
     {
       "day": 23,
       "month": 6,
       "year": 2018,
-      "pushups": [15, 15, 15]
+      "pushups": [
+        15,
+        15,
+        15
+      ]
     },
     {
       "day": 26,
       "month": 6,
       "year": 2018,
-      "pushups": [11, 10, 15, 10]
+      "pushups": [
+        11,
+        10,
+        15,
+        10
+      ]
     },
     {
       "day": 29,
       "month": 6,
       "year": 2018,
-      "pushups": [25, 15, 15, 19]
+      "pushups": [
+        25,
+        15,
+        15,
+        19
+      ]
     },
     {
       "day": 2,
       "month": 7,
       "year": 2018,
-      "pushups": [22, 13, 10, 15, 10]
+      "pushups": [
+        22,
+        13,
+        10,
+        15,
+        10
+      ]
     },
     {
       "day": 5,
       "month": 7,
       "year": 2018,
-      "pushups": [26, 20, 15, 10]
+      "pushups": [
+        26,
+        20,
+        15,
+        10
+      ]
     },
     {
       "day": 8,
       "month": 7,
       "year": 2018,
-      "pushups": [20, 20, 15, 12, 8]
+      "pushups": [
+        20,
+        20,
+        15,
+        12,
+        8
+      ]
     },
     {
       "day": 10,
       "month": 7,
       "year": 2018,
-      "pushups": [30, 15, 17, 11]
+      "pushups": [
+        30,
+        15,
+        17,
+        11
+      ]
     },
     {
       "day": 13,
       "month": 7,
       "year": 2018,
-      "pushups": [25, 15, 15, 15]
+      "pushups": [
+        25,
+        15,
+        15,
+        15
+      ]
     },
     {
       "day": 15,
       "month": 7,
       "year": 2018,
-      "pushups": [27, 15, 10, 10]
+      "pushups": [
+        27,
+        15,
+        10,
+        10
+      ]
     },
     {
       "day": 19,
       "month": 7,
       "year": 2018,
-      "pushups": [30, 20, 17, 15]
+      "pushups": [
+        30,
+        20,
+        17,
+        15
+      ]
     },
     {
       "day": 22,
       "month": 7,
       "year": 2018,
-      "pushups": [30, 15, 10, 10]
+      "pushups": [
+        30,
+        15,
+        10,
+        10
+      ]
     },
     {
       "day": 25,
       "month": 7,
       "year": 2018,
-      "pushups": [30, 20, 10, 15]
+      "pushups": [
+        30,
+        20,
+        10,
+        15
+      ]
     },
     {
       "day": 28,
       "month": 7,
       "year": 2018,
-      "pushups": [20, 20, 11, 10, 11]
+      "pushups": [
+        20,
+        20,
+        11,
+        10,
+        11
+      ]
     },
     {
       "day": 31,
       "month": 7,
       "year": 2018,
-      "pushups": [30, 15, 15, 15]
+      "pushups": [
+        30,
+        15,
+        15,
+        15
+      ]
     },
     {
       "day": 2,
       "month": 8,
       "year": 2018,
-      "pushups": [31, 15, 12, 15, 10]
+      "pushups": [
+        31,
+        15,
+        12,
+        15,
+        10
+      ]
     },
     {
       "day": 8,
       "month": 8,
       "year": 2018,
-      "pushups": [20, 15, 15, 15]
+      "pushups": [
+        20,
+        15,
+        15,
+        15
+      ]
     },
     {
       "day": 11,
       "month": 8,
       "year": 2018,
-      "pushups": [23, 20, 15, 15]
+      "pushups": [
+        23,
+        20,
+        15,
+        15
+      ]
     },
     {
       "day": 14,
       "month": 8,
       "year": 2018,
-      "pushups": [20, 17, 15, 12, 10]
+      "pushups": [
+        20,
+        17,
+        15,
+        12,
+        10
+      ]
     },
     {
       "day": 17,
       "month": 8,
       "year": 2018,
-      "pushups": [10, 15, 10, 12, 15, 10]
+      "pushups": [
+        10,
+        15,
+        10,
+        12,
+        15,
+        10
+      ]
     },
     {
       "day": 19,
       "month": 8,
       "year": 2018,
-      "pushups": [35, 15, 10, 15]
+      "pushups": [
+        35,
+        15,
+        10,
+        15
+      ]
     },
     {
       "day": 22,
       "month": 8,
       "year": 2018,
-      "pushups": [31, 15, 15, 15]
+      "pushups": [
+        31,
+        15,
+        15,
+        15
+      ]
     },
     {
       "day": 24,
       "month": 8,
       "year": 2018,
-      "pushups": [15, 21, 10, 15, 11, 10, 10, 11]
+      "pushups": [
+        15,
+        21,
+        10,
+        15,
+        11,
+        10,
+        10,
+        11
+      ]
     },
     {
       "day": 27,
       "month": 8,
       "year": 2018,
-      "pushups": [15, 15, 10, 10]
+      "pushups": [
+        15,
+        15,
+        10,
+        10
+      ]
     },
     {
       "day": 31,
       "month": 8,
       "year": 2018,
-      "pushups": [25, 15, 15, 13, 12]
+      "pushups": [
+        25,
+        15,
+        15,
+        13,
+        12
+      ]
     },
     {
       "day": 2,
       "month": 9,
       "year": 2018,
-      "pushups": [28, 16, 15, 13]
+      "pushups": [
+        28,
+        16,
+        15,
+        13
+      ]
     },
     {
       "day": 4,
       "month": 9,
       "year": 2018,
-      "pushups": [26, 15, 15, 16, 10]
+      "pushups": [
+        26,
+        15,
+        15,
+        16,
+        10
+      ]
     },
     {
       "day": 8,
       "month": 9,
       "year": 2018,
-      "pushups": [25, 15, 16, 12, 12]
+      "pushups": [
+        25,
+        15,
+        16,
+        12,
+        12
+      ]
     },
     {
       "day": 19,
       "month": 11,
       "year": 2018,
-      "pushups": [36, 20, 15, 15]
+      "pushups": [
+        36,
+        20,
+        15,
+        15
+      ]
     },
     {
       "day": 21,
       "month": 11,
       "year": 2018,
-      "pushups": [30, 22, 15, 17]
+      "pushups": [
+        30,
+        22,
+        15,
+        17
+      ]
     },
     {
       "day": 23,
       "month": 11,
       "year": 2018,
-      "pushups": [30, 25, 20, 17, 13]
+      "pushups": [
+        30,
+        25,
+        20,
+        17,
+        13
+      ]
     },
     {
       "day": 26,
       "month": 11,
       "year": 2018,
-      "pushups": [25, 25, 25, 20]
+      "pushups": [
+        25,
+        25,
+        25,
+        20
+      ]
     },
     {
       "day": 28,
       "month": 11,
       "year": 2018,
-      "pushups": [30, 22, 15, 15]
+      "pushups": [
+        30,
+        22,
+        15,
+        15
+      ]
     },
     {
       "day": 2,
       "month": 12,
       "year": 2018,
-      "pushups": [30, 30, 20, 15]
+      "pushups": [
+        30,
+        30,
+        20,
+        15
+      ]
     },
     {
       "day": 6,
       "month": 12,
       "year": 2018,
-      "pushups": [30, 15, 15, 15]
+      "pushups": [
+        30,
+        15,
+        15,
+        15
+      ]
     },
     {
       "day": 8,
       "month": 12,
       "year": 2018,
-      "pushups": [35, 23, 15, 15]
+      "pushups": [
+        35,
+        23,
+        15,
+        15
+      ]
     },
     {
       "day": 11,
       "month": 12,
       "year": 2018,
-      "pushups": [25, 20, 20, 20]
+      "pushups": [
+        25,
+        20,
+        20,
+        20
+      ]
     },
     {
       "day": 13,
       "month": 12,
       "year": 2018,
-      "pushups": [30, 30, 20, 15]
+      "pushups": [
+        30,
+        30,
+        20,
+        15
+      ]
     },
     {
       "day": 15,
       "month": 12,
       "year": 2018,
-      "pushups": [35, 21, 15, 12]
+      "pushups": [
+        35,
+        21,
+        15,
+        12
+      ]
     },
     {
       "day": 22,
       "month": 12,
       "year": 2018,
-      "pushups": [25, 20, 20, 20]
+      "pushups": [
+        25,
+        20,
+        20,
+        20
+      ]
     },
     {
       "day": 25,
       "month": 12,
       "year": 2018,
-      "pushups": [35, 30, 17]
+      "pushups": [
+        35,
+        30,
+        17
+      ]
     },
     {
       "day": 27,
       "month": 12,
       "year": 2018,
-      "pushups": [22, 21, 20, 20]
+      "pushups": [
+        22,
+        21,
+        20,
+        20
+      ]
     },
     {
       "day": 29,
       "month": 12,
       "year": 2018,
-      "pushups": [30, 25, 20, 10]
+      "pushups": [
+        30,
+        25,
+        20,
+        10
+      ]
     },
     {
       "day": 2,
       "month": 1,
       "year": 2019,
-      "pushups": [27, 21, 20, 15]
+      "pushups": [
+        27,
+        21,
+        20,
+        15
+      ]
     },
     {
       "day": 5,
       "month": 1,
       "year": 2019,
-      "pushups": [20, 20, 15, 15, 10]
+      "pushups": [
+        20,
+        20,
+        15,
+        15,
+        10
+      ]
     },
     {
       "day": 15,
       "month": 1,
       "year": 2019,
-      "pushups": [26, 20, 20, 13]
+      "pushups": [
+        26,
+        20,
+        20,
+        13
+      ]
     },
     {
       "day": 18,
       "month": 1,
       "year": 2019,
-      "pushups": [30, 20, 17, 18]
+      "pushups": [
+        30,
+        20,
+        17,
+        18
+      ]
     },
     {
       "day": 20,
       "month": 1,
       "year": 2019,
-      "pushups": [25, 20, 15, 16, 10]
+      "pushups": [
+        25,
+        20,
+        15,
+        16,
+        10
+      ]
     },
     {
       "day": 25,
       "month": 1,
       "year": 2019,
-      "pushups": [25, 25, 15, 16]
+      "pushups": [
+        25,
+        25,
+        15,
+        16
+      ]
     },
     {
       "day": 27,
       "month": 1,
       "year": 2019,
-      "pushups": [25, 25, 15, 17]
+      "pushups": [
+        25,
+        25,
+        15,
+        17
+      ]
     },
     {
       "day": 29,
       "month": 1,
       "year": 2019,
-      "pushups": [25, 20, 20, 20]
+      "pushups": [
+        25,
+        20,
+        20,
+        20
+      ]
     },
     {
       "day": 31,
       "month": 1,
       "year": 2019,
-      "pushups": [30, 21, 21, 15]
+      "pushups": [
+        30,
+        21,
+        21,
+        15
+      ]
     },
     {
       "day": 2,
       "month": 2,
       "year": 2019,
-      "pushups": [30, 20, 15, 15]
+      "pushups": [
+        30,
+        20,
+        15,
+        15
+      ]
     },
     {
       "day": 4,
       "month": 2,
       "year": 2019,
-      "pushups": [30, 20, 25, 10]
+      "pushups": [
+        30,
+        20,
+        25,
+        10
+      ]
     },
     {
       "day": 6,
       "month": 2,
       "year": 2019,
-      "pushups": [35, 20, 16, 16]
+      "pushups": [
+        35,
+        20,
+        16,
+        16
+      ]
     },
     {
       "day": 8,
       "month": 2,
       "year": 2019,
-      "pushups": [37, 28, 11, 11]
+      "pushups": [
+        37,
+        28,
+        11,
+        11
+      ]
     },
     {
       "day": 10,
       "month": 2,
       "year": 2019,
-      "pushups": [30, 30, 20, 15]
+      "pushups": [
+        30,
+        30,
+        20,
+        15
+      ]
     },
     {
       "day": 12,
       "month": 2,
       "year": 2019,
-      "pushups": [30, 20, 20, 15]
+      "pushups": [
+        30,
+        20,
+        20,
+        15
+      ]
     },
     {
       "day": 14,
       "month": 2,
       "year": 2019,
-      "pushups": [35, 25, 22, 15]
+      "pushups": [
+        35,
+        25,
+        22,
+        15
+      ]
     },
     {
       "day": 16,
       "month": 2,
       "year": 2019,
-      "pushups": [40, 25, 20, 15]
+      "pushups": [
+        40,
+        25,
+        20,
+        15
+      ]
     },
     {
       "day": 18,
       "month": 2,
       "year": 2019,
-      "pushups": [35, 25, 15, 15]
+      "pushups": [
+        35,
+        25,
+        15,
+        15
+      ]
     },
     {
       "day": 20,
       "month": 2,
       "year": 2019,
-      "pushups": [30, 20, 20, 15]
+      "pushups": [
+        30,
+        20,
+        20,
+        15
+      ]
     },
     {
       "day": 22,
       "month": 2,
       "year": 2019,
-      "pushups": [35, 20, 20, 15]
+      "pushups": [
+        35,
+        20,
+        20,
+        15
+      ]
     },
     {
       "day": 24,
       "month": 2,
       "year": 2019,
-      "pushups": [30, 20, 23, 17]
+      "pushups": [
+        30,
+        20,
+        23,
+        17
+      ]
     },
     {
       "day": 26,
       "month": 2,
       "year": 2019,
-      "pushups": [35, 20, 25, 15]
+      "pushups": [
+        35,
+        20,
+        25,
+        15
+      ]
     },
     {
       "day": 28,
       "month": 2,
       "year": 2019,
-      "pushups": [30, 20, 20, 20]
+      "pushups": [
+        30,
+        20,
+        20,
+        20
+      ]
     },
     {
       "day": 2,
       "month": 3,
       "year": 2019,
-      "pushups": [30, 25, 25, 20]
+      "pushups": [
+        30,
+        25,
+        25,
+        20
+      ]
     },
     {
       "day": 4,
       "month": 3,
       "year": 2019,
-      "pushups": [30, 30, 15, 15]
+      "pushups": [
+        30,
+        30,
+        15,
+        15
+      ]
     },
     {
       "day": 6,
       "month": 3,
       "year": 2019,
-      "pushups": [35, 22, 22, 18, 9]
+      "pushups": [
+        35,
+        22,
+        22,
+        18,
+        9
+      ]
     },
     {
       "day": 8,
       "month": 3,
       "year": 2019,
-      "pushups": [25, 20, 20, 25, 20]
+      "pushups": [
+        25,
+        20,
+        20,
+        25,
+        20
+      ]
     },
     {
       "day": 10,
       "month": 3,
       "year": 2019,
-      "pushups": [25, 25, 15, 20, 20]
+      "pushups": [
+        25,
+        25,
+        15,
+        20,
+        20
+      ]
     },
     {
       "day": 12,
       "month": 3,
       "year": 2019,
-      "pushups": [30, 21, 20, 20, 20]
+      "pushups": [
+        30,
+        21,
+        20,
+        20,
+        20
+      ]
     },
     {
       "day": 15,
       "month": 3,
       "year": 2019,
-      "pushups": [16, 20, 20, 17, 16, 15]
+      "pushups": [
+        16,
+        20,
+        20,
+        17,
+        16,
+        15
+      ]
     },
     {
       "day": 17,
       "month": 3,
       "year": 2019,
-      "pushups": [25, 25, 15, 15, 12]
+      "pushups": [
+        25,
+        25,
+        15,
+        15,
+        12
+      ]
     },
     {
       "day": 21,
       "month": 3,
       "year": 2019,
-      "pushups": [30, 25, 20, 20]
+      "pushups": [
+        30,
+        25,
+        20,
+        20
+      ]
     },
     {
       "day": 23,
       "month": 3,
       "year": 2019,
-      "pushups": [35, 25, 20, 20]
+      "pushups": [
+        35,
+        25,
+        20,
+        20
+      ]
     },
     {
       "day": 25,
       "month": 3,
       "year": 2019,
-      "pushups": [25, 15, 15, 20, 17]
+      "pushups": [
+        25,
+        15,
+        15,
+        20,
+        17
+      ]
     },
     {
       "day": 27,
       "month": 3,
       "year": 2019,
-      "pushups": [35, 25, 20, 20]
+      "pushups": [
+        35,
+        25,
+        20,
+        20
+      ]
     },
     {
       "day": 30,
       "month": 3,
       "year": 2019,
-      "pushups": [20, 20, 20, 15, 15]
+      "pushups": [
+        20,
+        20,
+        20,
+        15,
+        15
+      ]
     },
     {
       "day": 1,
       "month": 4,
       "year": 2019,
-      "pushups": [25, 25, 20, 20]
+      "pushups": [
+        25,
+        25,
+        20,
+        20
+      ]
     },
     {
       "day": 3,
       "month": 4,
       "year": 2019,
-      "pushups": [30, 16, 21, 16, 16]
+      "pushups": [
+        30,
+        16,
+        21,
+        16,
+        16
+      ]
     },
     {
       "day": 5,
       "month": 4,
       "year": 2019,
-      "pushups": [31, 20, 20, 16]
+      "pushups": [
+        31,
+        20,
+        20,
+        16
+      ]
     },
     {
       "day": 7,
       "month": 4,
       "year": 2019,
-      "pushups": [30, 27, 20, 20]
+      "pushups": [
+        30,
+        27,
+        20,
+        20
+      ]
     },
     {
       "day": 9,
       "month": 4,
       "year": 2019,
-      "pushups": [30, 25, 20, 17]
+      "pushups": [
+        30,
+        25,
+        20,
+        17
+      ]
     },
     {
       "day": 11,
       "month": 4,
       "year": 2019,
-      "pushups": [25, 25, 25, 20]
+      "pushups": [
+        25,
+        25,
+        25,
+        20
+      ]
     },
     {
       "day": 13,
       "month": 4,
       "year": 2019,
-      "pushups": [25, 20, 20, 15]
+      "pushups": [
+        25,
+        20,
+        20,
+        15
+      ]
     },
     {
       "day": 16,
       "month": 4,
       "year": 2019,
-      "pushups": [25, 20, 15, 20]
+      "pushups": [
+        25,
+        20,
+        15,
+        20
+      ]
     },
     {
       "day": 18,
       "month": 4,
       "year": 2019,
-      "pushups": [25, 25, 20, 20]
+      "pushups": [
+        25,
+        25,
+        20,
+        20
+      ]
     },
     {
       "day": 20,
       "month": 4,
       "year": 2019,
-      "pushups": [30, 20, 15, 20]
+      "pushups": [
+        30,
+        20,
+        15,
+        20
+      ]
     },
     {
       "day": 22,
       "month": 4,
       "year": 2019,
-      "pushups": [25, 25, 25, 20]
+      "pushups": [
+        25,
+        25,
+        25,
+        20
+      ]
     },
     {
       "day": 24,
       "month": 4,
       "year": 2019,
-      "pushups": [35, 25, 20, 15]
+      "pushups": [
+        35,
+        25,
+        20,
+        15
+      ]
     },
     {
       "day": 26,
       "month": 4,
       "year": 2019,
-      "pushups": [35, 30, 15, 20]
+      "pushups": [
+        35,
+        30,
+        15,
+        20
+      ]
     },
     {
       "day": 28,
       "month": 4,
       "year": 2019,
-      "pushups": [30, 25, 25, 20]
+      "pushups": [
+        30,
+        25,
+        25,
+        20
+      ]
     },
     {
       "day": 1,
       "month": 5,
       "year": 2019,
-      "pushups": [25, 25, 20, 20, 20]
+      "pushups": [
+        25,
+        25,
+        20,
+        20,
+        20
+      ]
     },
     {
       "day": 4,
       "month": 5,
       "year": 2019,
-      "pushups": [15, 20]
+      "pushups": [
+        15,
+        20
+      ]
     },
     {
       "day": 6,
       "month": 5,
       "year": 2019,
-      "pushups": [25, 20, 20, 15]
+      "pushups": [
+        25,
+        20,
+        20,
+        15
+      ]
     },
     {
       "day": 8,
       "month": 5,
       "year": 2019,
-      "pushups": [25, 25, 25, 15]
+      "pushups": [
+        25,
+        25,
+        25,
+        15
+      ]
     },
     {
       "day": 10,
       "month": 5,
       "year": 2019,
-      "pushups": [20, 15, 15, 20]
+      "pushups": [
+        20,
+        15,
+        15,
+        20
+      ]
     },
     {
       "day": 12,
       "month": 5,
       "year": 2019,
-      "pushups": [25, 25, 15, 15]
+      "pushups": [
+        25,
+        25,
+        15,
+        15
+      ]
     },
     {
       "day": 14,
       "month": 5,
       "year": 2019,
-      "pushups": [25, 20, 10, 16, 15]
+      "pushups": [
+        25,
+        20,
+        10,
+        16,
+        15
+      ]
     },
     {
       "day": 17,
       "month": 5,
       "year": 2019,
-      "pushups": [25, 20, 20, 15]
+      "pushups": [
+        25,
+        20,
+        20,
+        15
+      ]
     },
     {
       "day": 19,
       "month": 5,
       "year": 2019,
-      "pushups": [25, 25, 15, 20]
+      "pushups": [
+        25,
+        25,
+        15,
+        20
+      ]
     },
     {
       "day": 22,
       "month": 5,
       "year": 2019,
-      "pushups": [30, 25, 20, 20]
+      "pushups": [
+        30,
+        25,
+        20,
+        20
+      ]
     },
     {
       "day": 26,
       "month": 5,
       "year": 2019,
-      "pushups": [35, 20, 30, 15]
+      "pushups": [
+        35,
+        20,
+        30,
+        15
+      ]
     },
     {
       "day": 30,
       "month": 5,
       "year": 2019,
-      "pushups": [40, 25, 20, 15]
+      "pushups": [
+        40,
+        25,
+        20,
+        15
+      ]
     },
     {
       "day": 1,
       "month": 6,
       "year": 2019,
-      "pushups": [30, 15, 20, 15]
+      "pushups": [
+        30,
+        15,
+        20,
+        15
+      ]
     },
     {
       "day": 4,
       "month": 6,
       "year": 2019,
-      "pushups": [25, 25, 15, 15]
+      "pushups": [
+        25,
+        25,
+        15,
+        15
+      ]
     },
     {
       "day": 7,
       "month": 6,
       "year": 2019,
-      "pushups": [30, 30, 25, 15, 12]
+      "pushups": [
+        30,
+        30,
+        25,
+        15,
+        12
+      ]
     },
     {
       "day": 10,
       "month": 6,
       "year": 2019,
-      "pushups": [35, 25, 20, 20]
+      "pushups": [
+        35,
+        25,
+        20,
+        20
+      ]
     },
     {
       "day": 13,
       "month": 6,
       "year": 2019,
-      "pushups": [25, 25, 20, 15]
+      "pushups": [
+        25,
+        25,
+        20,
+        15
+      ]
     },
     {
       "day": 16,
       "month": 6,
       "year": 2019,
-      "pushups": [20, 25, 15, 20]
+      "pushups": [
+        20,
+        25,
+        15,
+        20
+      ]
     },
     {
       "day": 18,
       "month": 6,
       "year": 2019,
-      "pushups": [35, 20, 15, 15]
+      "pushups": [
+        35,
+        20,
+        15,
+        15
+      ]
     },
     {
       "day": 21,
       "month": 6,
       "year": 2019,
-      "pushups": [35, 30, 25]
+      "pushups": [
+        35,
+        30,
+        25
+      ]
     },
     {
       "day": 23,
       "month": 6,
       "year": 2019,
-      "pushups": [31, 20, 15, 15]
+      "pushups": [
+        31,
+        20,
+        15,
+        15
+      ]
     },
     {
       "day": 28,
       "month": 6,
       "year": 2019,
-      "pushups": [20, 20, 20, 20]
+      "pushups": [
+        20,
+        20,
+        20,
+        20
+      ]
     },
     {
       "day": 30,
       "month": 6,
       "year": 2019,
-      "pushups": [35, 20, 20, 10]
+      "pushups": [
+        35,
+        20,
+        20,
+        10
+      ]
     },
     {
       "day": 4,
       "month": 7,
       "year": 2019,
-      "pushups": [10, 15, 20, 20]
+      "pushups": [
+        10,
+        15,
+        20,
+        20
+      ]
     },
     {
       "day": 7,
       "month": 7,
       "year": 2019,
-      "pushups": [15, 15, 15, 15]
+      "pushups": [
+        15,
+        15,
+        15,
+        15
+      ]
     },
     {
       "day": 9,
       "month": 7,
       "year": 2019,
-      "pushups": [30, 25, 20, 20]
+      "pushups": [
+        30,
+        25,
+        20,
+        20
+      ]
     },
     {
       "day": 12,
       "month": 7,
       "year": 2019,
-      "pushups": [20, 20, 20, 20]
+      "pushups": [
+        20,
+        20,
+        20,
+        20
+      ]
     },
     {
       "day": 14,
       "month": 7,
       "year": 2019,
-      "pushups": [20, 25, 20, 15]
+      "pushups": [
+        20,
+        25,
+        20,
+        15
+      ]
     },
     {
       "day": 17,
       "month": 7,
       "year": 2019,
-      "pushups": [25, 20, 20, 20]
+      "pushups": [
+        25,
+        20,
+        20,
+        20
+      ]
     },
     {
       "day": 20,
       "month": 7,
       "year": 2019,
-      "pushups": [20, 20, 22, 20]
+      "pushups": [
+        20,
+        20,
+        22,
+        20
+      ]
     },
     {
       "day": 22,
       "month": 7,
       "year": 2019,
-      "pushups": [35, 22, 15, 15]
+      "pushups": [
+        35,
+        22,
+        15,
+        15
+      ]
     },
     {
       "day": 24,
       "month": 7,
       "year": 2019,
-      "pushups": [20, 20, 15, 15, 10]
+      "pushups": [
+        20,
+        20,
+        15,
+        15,
+        10
+      ]
     },
     {
       "day": 26,
       "month": 7,
       "year": 2019,
-      "pushups": [35, 20, 15, 20]
+      "pushups": [
+        35,
+        20,
+        15,
+        20
+      ]
     },
     {
       "day": 29,
       "month": 7,
       "year": 2019,
-      "pushups": [30, 25, 20, 10]
+      "pushups": [
+        30,
+        25,
+        20,
+        10
+      ]
     },
     {
       "day": 31,
       "month": 7,
       "year": 2019,
-      "pushups": [35, 30, 25]
+      "pushups": [
+        35,
+        30,
+        25
+      ]
     },
     {
       "day": 4,
       "month": 8,
       "year": 2019,
-      "pushups": [10]
+      "pushups": [
+        10
+      ]
     },
     {
       "day": 8,
       "month": 8,
       "year": 2019,
-      "pushups": [25, 20, 10]
+      "pushups": [
+        25,
+        20,
+        10
+      ]
     },
     {
       "day": 10,
       "month": 8,
       "year": 2019,
-      "pushups": [25, 20, 15]
-    }
+      "pushups": [
+        25,
+        20,
+        15
+      ]
+    },
+    {
+      "day": 12,
+      "month": 8,
+      "year": 2019,
+      "pushups": [
+        25,
+        20,
+        20
+      ]
+    },
+    {
+      "day": 15,
+      "month": 8,
+      "year": 2019,
+      "pushups": [
+        20,
+        20,
+        15,
+        15
+      ]
+    },
+    {
+      "day": 18,
+      "month": 8,
+      "year": 2019,
+      "pushups": [
+        30,
+        25,
+        15,
+        12
+      ]
+    },
   ]
 }
