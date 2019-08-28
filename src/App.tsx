@@ -2,7 +2,8 @@ import React from "react";
 import { hot } from "react-hot-loader";
 import styled from "styled-components";
 import { LoadingIndicator } from "./LoadingIndicator";
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
+
 
 const Home = React.lazy(() =>
   import("./Home").then(({ Home }) => ({ default: Home }))
@@ -12,6 +13,10 @@ const About = React.lazy(() =>
 );
 const Explore = React.lazy(() =>
   import("./Explore").then(({ Explore }) => ({ default: Explore }))
+);
+
+const NotFound = React.lazy(() =>
+  import("./NotFound").then(({ NotFound }) => ({ default: NotFound }))
 );
 
 import { Nav } from "./Nav";
@@ -30,8 +35,8 @@ const RouteContainer = styled.section`
   width: 100%;
 `;
 
-interface Props {}
-interface State {}
+interface Props { }
+interface State { }
 export class App extends React.Component<Props, State> {
   render() {
     return (
@@ -40,10 +45,13 @@ export class App extends React.Component<Props, State> {
           <AppContainer>
             <Nav />
             <RouteContainer>
-              <React.Suspense fallback={<LoadingIndicator message = "Just getting stuff going behind the scenes."/>}>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/explore" component={Explore} />
+              <React.Suspense fallback={<LoadingIndicator message="Just getting stuff going behind the scenes." />}>
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/explore" component={Explore} />
+                  <Route component={NotFound} />
+                </Switch>
               </React.Suspense>
             </RouteContainer>
           </AppContainer>
