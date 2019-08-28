@@ -18,6 +18,12 @@ export const Home: React.FunctionComponent<{}> = () => {
     <section>
       <Slant></Slant>
       <Card>
+        <h1>Added a 404: August 28, 2019</h1>
+        <p>
+          It turns out I neglected to add a 'Not Found' or '404' page.  That has been remedied.
+        </p>
+      </Card>
+      <Card>
         <h1>Added Sentry Logging: August 10, 2019</h1>
         <p>
           I added Sentry logging to the root of the application as well as the

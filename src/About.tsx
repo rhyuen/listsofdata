@@ -1,23 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
+import { FullBanner } from "./FullBanner";
 import { Card } from "./Card";
-
-const Banner: React.FunctionComponent<{}> = styled.section`
-  width: 100%;
-  height: 50vh;
-  background: black;
-  font-weight: bolder;
-  letter-spacing: 2px;
-  font-size: 25px;
-  position: fixed;
-  left: 0;
-  top: 5vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;  
-`;
 
 const PostBanner: React.FunctionComponent<{}> = styled.section`
   position: relative;
@@ -29,7 +13,7 @@ interface Props { }
 export const About: React.FunctionComponent<Props> = () => {
   return (
     <div>
-      <Banner>JustCounting</Banner>
+      <FullBanner>JustCounting</FullBanner>
       <PostBanner>
         <Card>
           <h1>About</h1>
