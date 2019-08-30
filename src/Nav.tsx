@@ -53,6 +53,10 @@ export const Nav: React.FunctionComponent<{}> = () => {
         <HomeLink to="/">JustCounting</HomeLink>
         <StyledLink to="/explore">Explore</StyledLink>
         <StyledLink to="/about">About</StyledLink>
+        <StyledLink to="/graph">Graph</StyledLink>
+
+
+
       </NavContainer>
     </RootNav>
   );

@@ -14,6 +14,7 @@ const About = React.lazy(() =>
 const Explore = React.lazy(() =>
   import("./Explore").then(({ Explore }) => ({ default: Explore }))
 );
+const Graph = React.lazy(() => import("./Graph").then(({ Graph }) => ({ default: Graph })));
 
 const NotFound = React.lazy(() =>
   import("./NotFound").then(({ NotFound }) => ({ default: NotFound }))
@@ -50,6 +51,7 @@ export class App extends React.Component<Props, State> {
                   <Route exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
                   <Route exact path="/explore" component={Explore} />
+                  <Route exact path="/graph" component={Graph} />
                   <Route component={NotFound} />
                 </Switch>
               </React.Suspense>

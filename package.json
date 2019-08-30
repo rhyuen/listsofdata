@@ -67,8 +67,8 @@
   },
   "scripts": {
     "start": "webpack",
-    "build": "webpack --config webpack.config.prod.js",
-    "dev": "webpack-dev-server --config webpack.config.dev.js --open",
+    "build": "NODE_ENV=prod webpack --config webpack.config.prod.js",
+    "dev": "NODE_ENV=dev webpack-dev-server --config webpack.config.dev.js --open",
     "dev:hot": "npm run dev -- --hot",
     "format": "prettier --write \"src/*.{js,jsx,css,json}\" ",
     "lint": "eslint \"src/**/*.{js,jsx}\"",

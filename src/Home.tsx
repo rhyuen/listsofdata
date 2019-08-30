@@ -18,6 +18,12 @@ export const Home: React.FunctionComponent<{}> = () => {
     <section>
       <Slant></Slant>
       <Card>
+        <h1>Charts: August 28, 2019</h1>
+        <p>
+          A Chart may or may not have been added.  Feature flags may or may not be attempted.
+        </p>
+      </Card>
+      <Card>
         <h1>Added a 404: August 28, 2019</h1>
         <p>
           It turns out I neglected to add a 'Not Found' or '404' page.  That has been remedied.
