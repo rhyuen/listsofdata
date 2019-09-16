@@ -16,6 +16,7 @@
     "babel-loader": "8.0.5",
     "clean-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "4.6.0",
+    "cross-env": "5.2.1",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.9.1",
     "eslint": "5.13.0",
@@ -67,8 +68,8 @@
   },
   "scripts": {
     "start": "webpack",
-    "build": "NODE_ENV=prod webpack --config webpack.config.prod.js",
-    "dev": "NODE_ENV=dev webpack-dev-server --config webpack.config.dev.js --open",
+    "build": "cross-env NODE_ENV=prod webpack --config webpack.config.prod.js",
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server --config webpack.config.dev.js --open",
     "dev:hot": "npm run dev -- --hot",
     "format": "prettier --write \"src/*.{js,jsx,css,json}\" ",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
