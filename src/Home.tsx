@@ -9,24 +9,30 @@ const Slant = styled.div`
   z-index: -1;
   height: 500px;
   width: 100vw;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   transform: skewY(-4deg);
 `;
 
 export const Home: React.FunctionComponent<{}> = () => {
   return (
     <section>
-      <Slant></Slant>
+      <Slant />
+      <Card>
+        <h1>More Charts: September 16, 2019</h1>
+        <p>More charts may soon be added.</p>
+      </Card>
       <Card>
         <h1>Charts: August 28, 2019</h1>
         <p>
-          A Chart may or may not have been added.  Feature flags may or may not be attempted.
+          A Chart may or may not have been added. Feature flags may or may not
+          be attempted.
         </p>
       </Card>
       <Card>
         <h1>Added a 404: August 28, 2019</h1>
         <p>
-          It turns out I neglected to add a 'Not Found' or '404' page.  That has been remedied.
+          It turns out I neglected to add a 'Not Found' or '404' page. That has
+          been remedied.
         </p>
       </Card>
       <Card>
