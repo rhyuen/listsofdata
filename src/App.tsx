@@ -14,7 +14,9 @@ const About = React.lazy(() =>
 const Explore = React.lazy(() =>
   import("./Explore").then(({ Explore }) => ({ default: Explore }))
 );
-const Graph = React.lazy(() => import("./Graph").then(({ Graph }) => ({ default: Graph })));
+const Graph = React.lazy(() => 
+  import("./Graphs/IndexGraph").then(({ IndexGraph }) => ({ default: IndexGraph }))
+  );
 
 const NotFound = React.lazy(() =>
   import("./NotFound").then(({ NotFound }) => ({ default: NotFound }))
