@@ -3,6 +3,12 @@
 Just some react stuff with data in it.
 
 A project that I ended up sticking with despite initially having written it in a manner that suggested the opposite.
+ 
+
+OCTOBER 4, 2019: 
+TS2362: Error when doing arithmetic operations on dates.
+
+> I got an error whilst doing math using `Date` objects.  I used [this](https://github.com/microsoft/TypeScript/issues/5710) as a reference.  I ended up using the `+` operator in front of the new `Date` objects ( +new Date()).  It made the type errors go away.
 
 JULY 10:
 Things I've learned from trying Typescript:
