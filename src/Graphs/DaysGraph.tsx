@@ -7,7 +7,7 @@ interface Props{
 }
   
 export const DaysGraph: React.FunctionComponent<Props> = (props : Props) => {    
-    const ref = React.useRef(null);    
+    const ref = React.useRef<HTMLCanvasElement>(null);    
             
     let {data} = props;
     console.log(data);
@@ -48,7 +48,7 @@ export const DaysGraph: React.FunctionComponent<Props> = (props : Props) => {
         const xValues = setX();        
                
 
-        const ctx = ref.current.getContext("2d");
+        const ctx = ref!.current!.getContext("2d");
         
         new Chart(ctx, {
             type: "line",

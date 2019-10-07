@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import styled from "styled-components";
 import * as Sentry from "@sentry/browser";
 
-const Button:React.FunctionComponent<{}> = styled.button`
+const Button = styled.button`
   padding: 10px;
   background: black;
   font-size: 16px;
@@ -53,6 +53,11 @@ export class RootErrorBoundary extends React.Component<{}, State> {
     });
   }
 
+  handleSentryClick = () => {
+    console.log("Sentry Send Logs button clicked!");
+    Sentry.showReportDialog({ eventId: this.state.eventId })
+  }
+
   render() {
     const { isError } = this.state;
     const { children } = this.props;
@@ -61,11 +66,7 @@ export class RootErrorBoundary extends React.Component<{}, State> {
         <h1>Something unfortunate has happened on my end.</h1>
         <p>An error has occurred.</p>
         <p>It's probably best to go back to the beginning.  Click <HyperLink href ="/">here</HyperLink> to do so.</p>
-        <Button onClick={() => {
-            console.log("Sentry Send Logs button clicked!");
-            Sentry.showReportDialog({ eventId: this.state.eventId })
-        }}
-        >
+        <Button onClick={this.handleSentryClick}>
           Report Feedback
         </Button>
       </Card>

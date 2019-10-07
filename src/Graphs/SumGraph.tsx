@@ -29,7 +29,7 @@ export const SumGraph : React.FunctionComponent<Props> = (props: Props) => {
     const xValues = setX();
     const yValues = setY();
    
-    const ctx : any= ref.current.getContext("2d");
+    const ctx : any= ref.current!.getContext("2d");
 
     new Chart(ctx, {
         type: "line",
