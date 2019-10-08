@@ -6,7 +6,8 @@ const ReturnedRow = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
 
   &:hover {
-    background: rgba(0, 0, 150, 0.1);
+    background: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
   }
 `;
 
@@ -25,6 +26,7 @@ export const Row: React.FunctionComponent<Props> = ({
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       &:hover {
         background: transparent;
+        font-weight: 400;
       }
     `;
     return <HeaderRow>{children}</HeaderRow>;

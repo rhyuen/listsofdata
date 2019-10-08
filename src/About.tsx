@@ -22,7 +22,7 @@ export const About: React.FunctionComponent<Props> = () => {
             entry for data visualization.
           </p>
         </Card>
-      </PostBanner>
+      </PostBanner>      
     </div>
   );
 };

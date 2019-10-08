@@ -2,6 +2,7 @@ import * as React from "react";
 import fileData from "../data/personaldata.json";
 import {DaysGraph} from "./DaysGraph";
 import {SumGraph} from "./SumGraph";
+import {SessionsPerMonth} from "./SessionsPerMonth"
 import {Data} from "./types/SharedTypes"
 
 export const IndexGraph: React.FunctionComponent<{}> = () => {     
@@ -16,6 +17,7 @@ export const IndexGraph: React.FunctionComponent<{}> = () => {
         <>            
             <DaysGraph data = {graphData}/>
             <SumGraph data = {graphData}/>
+            <SessionsPerMonth data ={graphData}/>
         </>    
     );
 };

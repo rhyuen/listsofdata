@@ -2,11 +2,24 @@ import * as React from "react";
 import { Card } from "./Card";
 import styled from "styled-components";
 
+const DropdownContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 10px;
+`;
+
 const FilterContainer = styled.section`
   display: flex;
 `;
 const FilterLabel = styled.label`
   font-size: 16px;
+  font-weight: bold;
+  background: rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10%;
 `;
 
 interface Props {
@@ -27,7 +40,7 @@ export const Filters: React.FunctionComponent<Props> = ({
     <Card>
       <h1>Filters</h1>
       <FilterContainer>
-        <div>
+        <DropdownContainer>
           <FilterLabel>Year</FilterLabel>
           <br />
           <select name="year" value={year} onChange={onChange}>
@@ -36,8 +49,8 @@ export const Filters: React.FunctionComponent<Props> = ({
               <option value={yr}>{yr}</option>
             ))}
           </select>
-        </div>
-        <div>
+        </DropdownContainer>
+        <DropdownContainer>
           <FilterLabel>Month</FilterLabel>
           <br />
           <select name="month" value={month} onChange={onChange}>
@@ -46,7 +59,7 @@ export const Filters: React.FunctionComponent<Props> = ({
               <option value={m}>{m}</option>
             ))}
           </select>
-        </div>
+        </DropdownContainer>
       </FilterContainer>
     </Card>
   );

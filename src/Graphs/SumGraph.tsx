@@ -32,7 +32,7 @@ export const SumGraph : React.FunctionComponent<Props> = (props: Props) => {
     const ctx : any= ref.current!.getContext("2d");
 
     new Chart(ctx, {
-        type: "line",
+        type: "bar",
         data: {
             labels: xValues,
             datasets: [{
@@ -49,7 +49,7 @@ export const SumGraph : React.FunctionComponent<Props> = (props: Props) => {
     return (
         <>
             <div>
-                <h1>Totals over Dates</h1>
+                <h1>Total sum of Pushups performed on a Day (2017/12/21 to Present).</h1>
                 <canvas ref={ref} />
             </div>             
         </>

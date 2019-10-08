@@ -28,10 +28,8 @@ const StyledLink = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 3px solid transparent;
-  &:visited {
-    color: black;
-  }
+  border-bottom: 3px solid transparent;  
+ 
   &:hover {
     border-bottom: 3px solid black;
   }
@@ -39,10 +37,10 @@ const StyledLink = styled(Link)`
 
 const HomeLink = styled(StyledLink)`
   font-weight: bold;
-  font-size: 20px;
+  font-size: 20px;    
 
   &:hover {
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid transparent;    
   }
 `;
 
@@ -54,12 +52,8 @@ export const Nav: React.FunctionComponent<{}> = () => {
         <StyledLink to="/explore">Explore</StyledLink>
         <StyledLink to="/about">About</StyledLink>
         <StyledLink to="/graph">Graph</StyledLink>
-
-
-
       </NavContainer>
     </RootNav>
   );
 };
 
-//export default Home;

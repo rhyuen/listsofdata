@@ -9,8 +9,7 @@ interface Props{
 export const DaysGraph: React.FunctionComponent<Props> = (props : Props) => {    
     const ref = React.useRef<HTMLCanvasElement>(null);    
             
-    let {data} = props;
-    console.log(data);
+    let {data} = props;    
     let startIndex;
     for(let i = 0; i < data.length; i++){
         const {year, month, day} = data[i];                    
@@ -51,7 +50,7 @@ export const DaysGraph: React.FunctionComponent<Props> = (props : Props) => {
         const ctx = ref!.current!.getContext("2d");
         
         new Chart(ctx, {
-            type: "line",
+            type: "bar",
             data: {
                 labels: xValues,
                 datasets: [{

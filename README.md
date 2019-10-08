@@ -5,6 +5,18 @@ Just some react stuff with data in it.
 A project that I ended up sticking with despite initially having written it in a manner that suggested the opposite.
  
 
+OCTOBER 7, 2019:
+TS2339: Type error when trying to call Object.values(targetObject) . 
+> I got an error when trying to pull the values into an array out of object.  MDN says you can [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values).  However, it turns out it wasn't added until es2017 and if your `tsconfig.json` was not configured to account for that then typescript will flag that method call as a type error.  It can be resolved by appending "es2017" to the "compilerOptions"."lib" array as denoted below:
+
+```json
+"compilerOptions": {
+    "lib": ["es2017"]
+}
+```
+
+The solution was found [here](https://stackoverflow.com/a/42967397).
+
 OCTOBER 4, 2019: 
 TS2362: Error when doing arithmetic operations on dates.
 

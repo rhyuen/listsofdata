@@ -18,6 +18,10 @@ export const Home: React.FunctionComponent<{}> = () => {
     <section>
       <Slant />
       <Card>
+        <h1>October 7, 2019</h1>
+        <p>A Chart has been added.   Number of pushup sessions per month has been graphed.</p>
+      </Card>
+      <Card>
         <h1>October 4, 2019</h1>
         <p>A Chart has been added.  Number of days between pushup sessions has been graphed.</p>
       </Card>
