@@ -18,12 +18,34 @@ export const Home: React.FunctionComponent<{}> = () => {
     <section>
       <Slant />
       <Card>
+        <h1>Updates: October 13, 2019</h1>
+        <p>
+          Another Chart has been added (Total Pushups performed per Month).{" "}
+          <br />
+          <br />
+          Axes Labels have been added for all graphs. <br />
+          <br />
+          Titles of Charts have been added to all graphs, replacing the HTML
+          that was previously used. <br />
+          <br />
+          Number of Sessions per Month graph has had its y-axis zero-indexed
+          instead of starting at two.
+          <br />
+        </p>
+      </Card>
+      <Card>
         <h1>October 7, 2019</h1>
-        <p>A Chart has been added.   Number of pushup sessions per month has been graphed.</p>
+        <p>
+          A Chart has been added. Number of pushup sessions per month has been
+          graphed.
+        </p>
       </Card>
       <Card>
         <h1>October 4, 2019</h1>
-        <p>A Chart has been added.  Number of days between pushup sessions has been graphed.</p>
+        <p>
+          A Chart has been added. Number of days between pushup sessions has
+          been graphed.
+        </p>
       </Card>
       <Card>
         <h1>More Charts: September 16, 2019</h1>

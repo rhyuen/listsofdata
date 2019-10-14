@@ -6,21 +6,22 @@ interface Props {
   data: Array<Data>;
 }
 
-export const SessionsPerMonth: React.FunctionComponent<Props> = (
-  props: Props
-) => {
+export const SumPerMonth: React.FunctionComponent<Props> = (props: Props) => {
   const ref = React.useRef<HTMLCanvasElement>(null);
 
   const getData = (): Object => {
     const { data } = props;
     let setsPerMonth = {};
     for (let i = 0; i < data.length; i++) {
-      const { year, month } = data[i];
+      const { year, month, pushups } = data[i];
       const key = `${year.toString().slice(2)}/${month.toString()}`;
+      const sum = pushups.reduce((item, acc) => {
+        return item + acc;
+      }, 0);
       if (key in setsPerMonth) {
-        setsPerMonth[key]++;
+        setsPerMonth[key] += sum;
       } else {
-        setsPerMonth[key] = 0;
+        setsPerMonth[key] = sum;
       }
     }
     return setsPerMonth;
@@ -40,7 +41,7 @@ export const SessionsPerMonth: React.FunctionComponent<Props> = (
         labels: xValues,
         datasets: [
           {
-            label: "Number of Sessions",
+            label: "Pushups performed",
             data: yValues
           }
         ]
@@ -59,7 +60,7 @@ export const SessionsPerMonth: React.FunctionComponent<Props> = (
               },
               scaleLabel: {
                 display: true,
-                labelString: "Number of Sessions"
+                labelString: "Number of Pushups Performed"
               }
             }
           ],
