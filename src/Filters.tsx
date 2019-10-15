@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Card } from "./Card";
 import styled from "styled-components";
+import { StyledHeader } from "./StyledHeader";
 
 const DropdownContainer = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ const FilterContainer = styled.section`
 const FilterLabel = styled.label`
   font-size: 16px;
   font-weight: bold;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -38,7 +39,7 @@ export const Filters: React.FunctionComponent<Props> = ({
 }) => {
   return (
     <Card>
-      <h1>Filters</h1>
+      <StyledHeader>Data Filters</StyledHeader>
       <FilterContainer>
         <DropdownContainer>
           <FilterLabel>Year</FilterLabel>
