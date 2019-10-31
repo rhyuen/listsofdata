@@ -33,6 +33,15 @@ export const SumPerMonth: React.FunctionComponent<Props> = (props: Props) => {
     const xValues: Array<String> = Object.keys(dataSet);
     const yValues: Array<Number> = Object.values(dataSet);
 
+    const average = Math.ceil(
+      yValues.reduce((curr: any, acc: any) => curr + acc, 0) / yValues.length
+    );
+    const averageDataPoints = Array(yValues.length).fill(
+      average,
+      0,
+      yValues.length
+    );
+
     const ctx: any = ref.current!.getContext("2d");
 
     new Chart(ctx, {
@@ -43,6 +52,12 @@ export const SumPerMonth: React.FunctionComponent<Props> = (props: Props) => {
           {
             label: "Pushups performed",
             data: yValues
+          },
+          {
+            label: "Average Pushups performed per Month",
+            data: averageDataPoints,
+            type: "line",
+            fill: false
           }
         ]
       },

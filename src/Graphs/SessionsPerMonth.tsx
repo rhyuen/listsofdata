@@ -34,6 +34,14 @@ export const SessionsPerMonth: React.FunctionComponent<Props> = (
 
     const ctx: any = ref.current!.getContext("2d");
 
+    const averageSessions =
+      yValues.reduce((curr: any, acc: any) => curr + acc, 0) / yValues.length;
+    const averageDataPoints = Array(yValues.length).fill(
+      averageSessions,
+      0,
+      yValues.length
+    );
+
     new Chart(ctx, {
       type: "bar",
       data: {
@@ -42,6 +50,12 @@ export const SessionsPerMonth: React.FunctionComponent<Props> = (
           {
             label: "Number of Sessions",
             data: yValues
+          },
+          {
+            label: "Average Number of Sessions",
+            data: averageDataPoints,
+            type: "line",
+            fill: false
           }
         ]
       },
@@ -49,7 +63,7 @@ export const SessionsPerMonth: React.FunctionComponent<Props> = (
         title: {
           display: true,
           text:
-            "Total Number of Pushups Performed per Month (2017/12/21 to Present)."
+            "Number of Pushup Sessions Performed per Month (2017/12/21 to Present)."
         },
         scales: {
           yAxes: [
