@@ -7,7 +7,7 @@ const Container = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background: white;
-  z-index: 5;
+  z-index: 4;
 `;
 interface Props {}
 export const Card: React.FunctionComponent<Props> = props => {

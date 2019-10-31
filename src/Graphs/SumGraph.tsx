@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Data } from "./types/SharedTypes";
 import Chart from "chart.js";
+import { Redirect } from "react-router";
 
 interface Props {
   data: Array<Data>;
@@ -32,6 +33,15 @@ export const SumGraph: React.FunctionComponent<Props> = (props: Props) => {
     const xValues = setX();
     const yValues = setY();
 
+    const average = Math.ceil(
+      yValues.reduce((curr: any, acc: any) => curr + acc, 0) / yValues.length
+    );
+    const averageDataPoints = Array(yValues.length).fill(
+      average,
+      0,
+      yValues.length
+    );
+
     const ctx: any = ref.current!.getContext("2d");
 
     new Chart(ctx, {
@@ -42,6 +52,12 @@ export const SumGraph: React.FunctionComponent<Props> = (props: Props) => {
           {
             label: "Number of Pushups.",
             data: yValues
+          },
+          {
+            label: "Average Number of Pushups",
+            data: averageDataPoints,
+            type: "scatter",
+            fill: false
           }
         ]
       },

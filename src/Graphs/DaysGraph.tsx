@@ -56,6 +56,15 @@ export const DaysGraph: React.FunctionComponent<Props> = (props: Props) => {
     const yValues = setY();
     const xValues = setX();
 
+    const average =
+      yValues.reduce((curr: any, acc: any) => curr + acc, 0) / xValues.length;
+
+    const averageArray = Array(xValues.length).fill(
+      Math.ceil(average),
+      0,
+      xValues.length
+    );
+
     const ctx = ref!.current!.getContext("2d");
 
     new Chart(ctx, {
@@ -65,7 +74,15 @@ export const DaysGraph: React.FunctionComponent<Props> = (props: Props) => {
         datasets: [
           {
             label: "Number of Days between Activities",
-            data: yValues
+            data: yValues,
+            order: 1
+          },
+          {
+            label: "Average Days of Rest",
+            data: averageArray,
+            type: "scatter",
+            fill: false,
+            order: 2
           }
         ]
       },
