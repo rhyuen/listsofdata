@@ -55,11 +55,15 @@ export const SessionsPerMonth: React.FunctionComponent<Props> = (
             label: "Average Number of Sessions",
             data: averageDataPoints,
             type: "line",
-            fill: false
+            fill: false,
+            backgroundColor: ["black"],
+            borderColor: ["black"],
+            pointRadius: 0
           }
         ]
       },
       options: {
+        responsive: true,
         title: {
           display: true,
           text:

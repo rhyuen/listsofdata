@@ -80,13 +80,17 @@ export const DaysGraph: React.FunctionComponent<Props> = (props: Props) => {
           {
             label: "Average Days of Rest",
             data: averageArray,
-            type: "scatter",
+            type: "line",
             fill: false,
-            order: 2
+            order: 2,
+            backgroundColor: ["black"],
+            borderColor: ["black"],
+            pointRadius: 0
           }
         ]
       },
       options: {
+        responsive: true,
         title: {
           display: true,
           text:

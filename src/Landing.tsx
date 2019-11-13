@@ -67,7 +67,7 @@ const FigCaption = styled.figcaption`
 
 interface Props {}
 
-export const About: React.FunctionComponent<Props> = () => {
+export const Landing: React.FunctionComponent<Props> = () => {
   const tileData = [
     { time: "Last 14 Days", number: "14", unit: "sessions" },
     { time: "Last 30 Days", number: "30", unit: "sessions" },

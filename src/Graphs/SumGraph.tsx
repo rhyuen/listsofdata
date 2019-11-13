@@ -56,12 +56,16 @@ export const SumGraph: React.FunctionComponent<Props> = (props: Props) => {
           {
             label: "Average Number of Pushups",
             data: averageDataPoints,
-            type: "scatter",
-            fill: false
+            type: "line",
+            fill: false,
+            backgroundColor: ["black"],
+            borderColor: ["black"],
+            pointRadius: 0
           }
         ]
       },
       options: {
+        responsive: true,
         title: {
           display: true,
           text:
