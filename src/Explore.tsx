@@ -5,6 +5,7 @@ import fileData from "./data/personaldata.json";
 import uuid from "uuid/v4";
 import { Card } from "./Card";
 import { SideColumn } from "./SideColumn";
+import { StyledHeader } from "./StyledHeader";
 import { Filters } from "./Filters";
 import { Row } from "./Row";
 import { Cell } from "./Cell";
@@ -16,7 +17,7 @@ const Slant = styled.div`
   z-index: -1;
   height: 500px;
   width: 100vw;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   transform: skewY(-4deg);
 `;
 const ExploreRoot = styled.section`
@@ -108,6 +109,7 @@ export class Explore extends React.Component<{}, State> {
           />
           <Summary data={subset} />
           <Card>
+            <StyledHeader>Data Points</StyledHeader>
             <Row type="header">
               <Cell size={2}>Date</Cell>
               {Array(max)

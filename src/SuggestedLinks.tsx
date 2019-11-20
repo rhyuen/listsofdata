@@ -40,7 +40,7 @@ export class SuggestedLinks extends React.Component<{}, State> {
     const { data, loading } = this.state;
     return (
       <Cardless>
-        <CardlessHeader>Other links</CardlessHeader>
+        <CardlessHeader>Other Links</CardlessHeader>
         <section>
           {loading
             ? "Loading Links..."
