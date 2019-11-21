@@ -1,20 +1,8 @@
 import * as React from "react";
-import styled from "styled-components";
+import { Slant, SlantContent, SlantOffset } from "./shared/Slant";
 import { Card } from "./Card";
 import { StyledHeader } from "./StyledHeader";
-import { Link, Redirect } from "react-router-dom";
 import Posts from "./data/postupdates.js";
-
-const Slant = styled.div`
-  position: fixed;
-  left: 0;
-  top: -20px;
-  z-index: -1;
-  height: 500px;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.1);
-  transform: skewY(-4deg);
-`;
 
 interface Props {
   match: {
@@ -32,9 +20,13 @@ type Post = {
 
 export const Blog: React.FunctionComponent<Props> = (props: Props) => {
   return (
-    <section>
-      <Slant />
-      <div>
+    <>
+      <Slant>
+        <SlantContent>
+          <strong>BLOG</strong>: A log of updates and changes made
+        </SlantContent>
+      </Slant>
+      <SlantOffset>
         {Posts.map((post: Post, index: Number) => {
           return (
             <Card>
@@ -45,7 +37,7 @@ export const Blog: React.FunctionComponent<Props> = (props: Props) => {
             </Card>
           );
         })}
-      </div>
-    </section>
+      </SlantOffset>
+    </>
   );
 };
