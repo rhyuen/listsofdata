@@ -3,6 +3,7 @@ import { hot } from "react-hot-loader";
 import styled from "styled-components";
 import { LoadingIndicator } from "./shared/LoadingIndicator";
 import { HashRouter, Route, Switch } from "react-router-dom";
+import "@babel/polyfill";
 
 const Blog = React.lazy(() =>
   import("./Blog").then(({ Blog }) => ({ default: Blog }))

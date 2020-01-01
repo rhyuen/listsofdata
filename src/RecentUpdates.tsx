@@ -6,6 +6,7 @@ import { CardItem } from "./CardItem";
 import { StyledAnchor } from "./StyledAnchor";
 import { Subtext } from "./Subtext";
 import { getGitHubUpdates } from "./services/githubsvc";
+import { LoadingIndicator } from "./shared/LoadingIndicator";
 
 interface State {
   data: Array<object>;
@@ -55,25 +56,27 @@ export class RecentUpdates extends React.Component<{}, State> {
       <Cardless>
         <CardlessHeader>Recent Updates</CardlessHeader>
         <section>
-          {loading
-            ? "Loading Links..."
-            : data
-                .filter((item: Item) => item.type === "PushEvent")
-                .map((datum: any) => {
-                  const { created_at } = datum;
-                  const { display_login } = datum.actor;
-                  const { message, url } = datum.payload.commits[0];
-                  return (
-                    <CardItem key={uuid()}>
-                      <StyledAnchor href={url}>
-                        UPDATE by {display_login}
-                      </StyledAnchor>
-                      <Subtext limit={50}>{message}</Subtext>
-                      <Subtext>{created_at.split("T")[0]}</Subtext>
-                    </CardItem>
-                  );
-                })
-                .slice(0, 5)}
+          {loading ? (
+            <LoadingIndicator message="Loading Links..." />
+          ) : (
+            data
+              .filter((item: Item) => item.type === "PushEvent")
+              .map((datum: any) => {
+                const { created_at } = datum;
+                const { display_login } = datum.actor;
+                const { message, url } = datum.payload.commits[0];
+                return (
+                  <CardItem key={uuid()}>
+                    <StyledAnchor href={url}>
+                      UPDATE by {display_login}
+                    </StyledAnchor>
+                    <Subtext limit={50}>{message}</Subtext>
+                    <Subtext>{created_at.split("T")[0]}</Subtext>
+                  </CardItem>
+                );
+              })
+              .slice(0, 5)
+          )}
         </section>
       </Cardless>
     );

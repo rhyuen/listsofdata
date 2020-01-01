@@ -6,6 +6,7 @@ import { StyledAnchor } from "./StyledAnchor";
 import { CardItem } from "./CardItem";
 import { Subtext } from "./Subtext";
 import { getLinks } from "./services/adsvc";
+import { LoadingIndicator } from "./shared/LoadingIndicator";
 
 interface State {
   data: Array<object>;
@@ -39,18 +40,20 @@ export class SuggestedLinks extends React.Component<{}, State> {
       <Cardless>
         <CardlessHeader>Other Links</CardlessHeader>
         <section>
-          {loading
-            ? "Loading Links..."
-            : data.map((datum: any) => {
-                return (
-                  <CardItem key={uuid()}>
-                    <StyledAnchor href={datum.link}>{datum.title}</StyledAnchor>
-                    <Subtext>{datum.subtitle}</Subtext>
-                    <br />
-                    <Subtext>{datum.source}</Subtext>
-                  </CardItem>
-                );
-              })}
+          {loading ? (
+            <LoadingIndicator message="Loading Links..." />
+          ) : (
+            data.map((datum: any) => {
+              return (
+                <CardItem key={uuid()}>
+                  <StyledAnchor href={datum.link}>{datum.title}</StyledAnchor>
+                  <Subtext>{datum.subtitle}</Subtext>
+                  <br />
+                  <Subtext>{datum.source}</Subtext>
+                </CardItem>
+              );
+            })
+          )}
         </section>
       </Cardless>
     );

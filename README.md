@@ -3,13 +3,43 @@
 Just some react stuff with data in it.
 
 A project that I ended up sticking with despite initially having written it in a manner that suggested the opposite.
- 
+
+**JANUARY 1, 2020**
+
+---
+
+I was looking to implement an abstraction for external services I wanted to hit and implmenting them in the following directory `./src/services/externalService.ts`.
+
+Code is as follows:
+
+```javascript
+export const getExternalService = async () => {
+  return axios.get("externalServiceURL");
+};
+
+React.useEffect(() => {
+  getExternalService()
+    .then()
+    .catch();
+});
+```
+
+I ended up getting this error called `regeneratorRuntime is not defined` or something to that effect. I found the solution [here]("https://stackoverflow.com/a/58432338")
+
+I was tripped up on this in the past (probably more than once) and found a way around it by not using the solution provided.
+
+The solution provided is fairly simple. There's only two steps!
+
+1. \$ npm install @babel/polyfill
+2. import "@babel/polyfill"; at the Root of your React App.
 
 **OCTOBER 7, 2019**:
 
+---
+
 _TS2339: Type error when trying to call Object.values(targetObject)._
 
-> I got an error when trying to pull the values into an array out of object.  MDN says you can [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values).  However, it turns out it wasn't added until es2017 and if your `tsconfig.json` was not configured to account for that then typescript will flag that method call as a type error.  It can be resolved by appending "es2017" to the "compilerOptions"."lib" array as denoted below:
+> I got an error when trying to pull the values into an array out of object. MDN says you can [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values). However, it turns out it wasn't added until es2017 and if your `tsconfig.json` was not configured to account for that then typescript will flag that method call as a type error. It can be resolved by appending "es2017" to the "compilerOptions"."lib" array as denoted below:
 
 ```json
 "compilerOptions": {
@@ -19,13 +49,17 @@ _TS2339: Type error when trying to call Object.values(targetObject)._
 
 The solution was found [here](https://stackoverflow.com/a/42967397).
 
-**OCTOBER 4, 2019**: 
+**OCTOBER 4, 2019**:
+
+---
 
 _TS2362: Error when doing arithmetic operations on dates._
 
-> I got an error whilst doing math using `Date` objects.  I used [this](https://github.com/microsoft/TypeScript/issues/5710) as a reference.  I ended up using the `+` operator in front of the new `Date` objects ( +new Date()).  It made the type errors go away.
+> I got an error whilst doing math using `Date` objects. I used [this](https://github.com/microsoft/TypeScript/issues/5710) as a reference. I ended up using the `+` operator in front of the new `Date` objects ( +new Date()). It made the type errors go away.
 
 **JULY 10, 2019**:
+
+---
 
 _Things I've learned from trying Typescript:_
 
@@ -43,6 +77,6 @@ _Things I've learned from trying Typescript:_
 
 **JULY 3, 2019: Adding Typescript.**
 
-**JUNE 28, 2019**: 
+**JUNE 28, 2019**:
 
 Currently wondering if it is a bad idea to integrate typescript into this because technology fads/trends.
