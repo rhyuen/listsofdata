@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Cardless } from "./Cardless";
 import uuid from "uuid/v4";
-import axios from "axios";
 import { CardlessHeader } from "./CardlessHeader";
 import { StyledAnchor } from "./StyledAnchor";
 import { CardItem } from "./CardItem";
 import { Subtext } from "./Subtext";
+import { getLinks } from "./services/adsvc";
 
 interface State {
   data: Array<object>;
@@ -17,10 +17,7 @@ export class SuggestedLinks extends React.Component<{}, State> {
     loading: true
   };
   componentDidMount() {
-    const url =
-      "https://nodefaastwo.netlify.com/.netlify/functions/getLinks?category=environment";
-    axios
-      .get(url)
+    getLinks()
       .then(res => {
         this.setState({
           data: res.data.result.slice(0, 5)

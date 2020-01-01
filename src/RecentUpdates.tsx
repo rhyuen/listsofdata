@@ -2,10 +2,10 @@ import * as React from "react";
 import { Cardless } from "./Cardless";
 import { CardlessHeader } from "./CardlessHeader";
 import uuid from "uuid/v4";
-import axios from "axios";
 import { CardItem } from "./CardItem";
 import { StyledAnchor } from "./StyledAnchor";
 import { Subtext } from "./Subtext";
+import { getGitHubUpdates } from "./services/githubsvc";
 
 interface State {
   data: Array<object>;
@@ -18,9 +18,7 @@ export class RecentUpdates extends React.Component<{}, State> {
   };
 
   componentDidMount() {
-    const githubURL = "https://api.github.com/repos/rhyuen/listsofdata/events";
-    axios
-      .get(githubURL)
+    getGitHubUpdates()
       .then(res => {
         console.log(res.data);
         this.setState({
