@@ -8,6 +8,9 @@ const PostBanner: React.FunctionComponent<{}> = styled.section`
   position: relative;
   top: 55vh;
 `;
+const BannerText = styled.span`
+  letter-spacing: 10px;
+`;
 
 const WIDTH = "1024px";
 const GAP = "10px";
@@ -72,12 +75,15 @@ export const Landing: React.FunctionComponent<Props> = () => {
     { time: "Last 14 Days", number: "14", unit: "sessions" },
     { time: "Last 30 Days", number: "30", unit: "sessions" },
     { time: "This Year", number: "365", unit: "sessions" },
-    { time: "Lifetime", number: "999", unit: "sessions" }
+    { time: "Lifetime", number: "999", unit: "sessions" },
+    { time: "Last Year", number: "100", unit: "sessions" }
   ];
 
   return (
     <div>
-      <FullBanner>JustCounting</FullBanner>
+      <FullBanner>
+        <BannerText>JustCounting</BannerText>
+      </FullBanner>
       <Slant />
       <PostBanner>
         <Card>
@@ -86,6 +92,12 @@ export const Landing: React.FunctionComponent<Props> = () => {
             Just counting some numbers over time so that it reduces the barrier
             to entry for data visualization. The numbers are counted because
             things that are not counted will not be improved.
+          </p>
+          <p>
+            Thanks for visiting,
+            <br />
+            <br />
+            <strong>Robert</strong>
           </p>
         </Card>
         <Grid>

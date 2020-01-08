@@ -1,5 +1,12 @@
 module.exports = [
   {
+    title: "Updates: January 7, 2020",
+    content: [
+      "I added a footer.  Loading spinners were also added earlier in the month."
+    ],
+    tags: ["updates"]
+  },
+  {
     title: "Updates: November 12, 2019",
     content: [
       "Removed the 'Dots' on the 'line' graphs in the charts.  This is done by setting {pointRadius: 0} in the 'data.dataset' key.",

@@ -4,6 +4,10 @@ Just some react stuff with data in it.
 
 A project that I ended up sticking with despite initially having written it in a manner that suggested the opposite.
 
+**JANUARY 7, 2020**
+
+Added a footer with scroll to top on click.
+
 **JANUARY 1, 2020**
 
 ---

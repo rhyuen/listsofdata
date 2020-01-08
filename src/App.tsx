@@ -3,6 +3,7 @@ import { hot } from "react-hot-loader";
 import styled from "styled-components";
 import { LoadingIndicator } from "./shared/LoadingIndicator";
 import { HashRouter, Route, Switch } from "react-router-dom";
+
 import "@babel/polyfill";
 
 const Blog = React.lazy(() =>
@@ -17,6 +18,12 @@ const Explore = React.lazy(() =>
 const Graph = React.lazy(() =>
   import("./Graphs/IndexGraph").then(({ IndexGraph }) => ({
     default: IndexGraph
+  }))
+);
+
+const Footer = React.lazy(() =>
+  import("./shared/Footer").then(({ Footer }) => ({
+    default: Footer
   }))
 );
 
@@ -40,35 +47,34 @@ const RouteContainer = styled.section`
   width: 100%;
 `;
 
-interface Props {}
-interface State {}
-export class App extends React.Component<Props, State> {
-  render() {
-    return (
-      <Root>
-        <HashRouter>
-          <AppContainer>
-            <Nav />
-            <RouteContainer>
-              <React.Suspense
-                fallback={
-                  <LoadingIndicator message="Just getting stuff going behind the scenes." />
-                }
-              >
-                <Switch>
-                  <Route exact path="/" component={Landing} />
-                  <Route exact path="/explore" component={Explore} />
-                  <Route exact path="/graph" component={Graph} />
-                  <Route exact path="/blog/:page" component={Blog} />
-                  <Route component={NotFound} />
-                </Switch>
-              </React.Suspense>
-            </RouteContainer>
-          </AppContainer>
-        </HashRouter>
-      </Root>
-    );
-  }
-}
+export const App: React.FunctionComponent<{}> = () => {
+  return (
+    <Root>
+      <HashRouter>
+        <AppContainer>
+          <Nav />
+          <RouteContainer>
+            <React.Suspense
+              fallback={
+                <LoadingIndicator message="Just getting stuff going behind the scenes." />
+              }
+            >
+              <Switch>
+                <Route exact path="/" component={Landing} />
+                <Route exact path="/explore" component={Explore} />
+                <Route exact path="/graph" component={Graph} />
+                <Route exact path="/blog/:page" component={Blog} />
+                <Route component={NotFound} />
+              </Switch>
+            </React.Suspense>
+          </RouteContainer>
+          <React.Suspense fallback={<p>Loading...</p>}>
+            <Footer />
+          </React.Suspense>
+        </AppContainer>
+      </HashRouter>
+    </Root>
+  );
+};
 
 //export default hot(module)(App);

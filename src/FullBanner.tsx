@@ -11,17 +11,16 @@ const StyledBanner = styled.section`
   position: fixed;
   left: 0;
   top: 5vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;  
+  color: white;
 `;
 
 interface Props {
-    children: any
+  children: any;
 }
 
 export const FullBanner: React.FunctionComponent<Props> = ({ children }) => {
-    return <StyledBanner>{children}</StyledBanner>;
-}
+  return <StyledBanner>{children}</StyledBanner>;
+};
