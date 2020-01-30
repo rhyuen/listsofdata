@@ -67,10 +67,10 @@ export const App: React.FunctionComponent<{}> = () => {
                 <Route component={NotFound} />
               </Switch>
             </React.Suspense>
+            <React.Suspense fallback={<p>Loading...</p>}>
+              <Footer />
+            </React.Suspense>
           </RouteContainer>
-          <React.Suspense fallback={<p>Loading...</p>}>
-            <Footer />
-          </React.Suspense>
         </AppContainer>
       </HashRouter>
     </Root>
