@@ -16,6 +16,7 @@
         "noImplicitAny": false,
         "downlevelIteration": true,
         "types": [
+            "jest",
             "node"
         ],
         "lib": [
