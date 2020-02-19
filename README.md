@@ -1,8 +1,16 @@
+[![CircleCI](https://circleci.com/gh/rhyuen/listsofdata.svg?style=svg)](https://circleci.com/gh/rhyuen/listsofdata)
+
 # ABOUT
 
 Just some react stuff with data in it.
 
-A project that I ended up sticking with despite initially having written it in a manner that suggested the opposite.
+A project that I ended up sticking with despite, initially, having written it in a manner that suggested the opposite.
+
+**FEBRUARY 20, 2020**
+
+Updated favicon to pixel art letter instead of an MSPaint image.
+
+Attempting to add a CircleCI badge to the README.md
 
 **JANUARY 7, 2020**
 
