@@ -75,7 +75,7 @@
     "dev:hot": "npm run dev -- --hot",
     "format": "prettier --write \"src/*.{js,jsx,css,json}\" ",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
-    "test": "jest",
+    "test": "jest --collectCoverage=true",
     "dev:test": "jest --watch"
   }
 }
