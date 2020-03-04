@@ -68,7 +68,7 @@ const FigCaption = styled.figcaption`
   font-weight: bold;
 `;
 
-interface Props {}
+interface Props { }
 
 export const Landing: React.FunctionComponent<Props> = () => {
   const tileData = [
@@ -90,8 +90,8 @@ export const Landing: React.FunctionComponent<Props> = () => {
           <h1>About</h1>
           <p>
             Just counting some numbers over time so that it reduces the barrier
-            to entry for data visualization. The numbers are counted because
-            things that are not counted will not be improved.
+            to entry for data visualization. What I am counting is the number of pushups I perform on a specified date.  I am counting pushups because I keep track of them on post-its and when the post-it is full of numbers I usually end up throwing it away, so I thought I would use those same numbers to encourage me to write more data visualizations.<br /><br />I am also recording and counting because
+            "things that are not counted will not be improved" is a saying I heard at one point.  Another saying that encouraged me was "Writing down your results increases your likelihood of continuing with them".
           </p>
           <p>
             Thanks for visiting,

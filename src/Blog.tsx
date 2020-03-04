@@ -3,14 +3,15 @@ import { Slant, SlantContent, SlantOffset } from "./shared/Slant";
 import { Card } from "./Card";
 import { StyledHeader } from "./StyledHeader";
 import Posts from "./data/postupdates.js";
+import uuid from "uuid";
 
-interface Props {
-  match: {
-    params: {
-      page: string;
-    };
-  };
-}
+// interface Props {
+//   match: {
+//     params: {
+//       page: string;
+//     };
+//   };
+// }
 
 type Post = {
   title: string;
@@ -18,7 +19,7 @@ type Post = {
   tags: Array<string>;
 };
 
-export const Blog: React.FunctionComponent<Props> = (props: Props) => {
+export const Blog: React.FunctionComponent<{}> = () => {
   return (
     <>
       <Slant>
@@ -29,10 +30,10 @@ export const Blog: React.FunctionComponent<Props> = (props: Props) => {
       <SlantOffset>
         {Posts.map((post: Post, index: Number) => {
           return (
-            <Card>
+            <Card key={uuid()}>
               <StyledHeader>{post.title}</StyledHeader>
               {post.content.map(text => {
-                return <p>{text}</p>;
+                return <p key={uuid()}>{text}</p>;
               })}
             </Card>
           );
