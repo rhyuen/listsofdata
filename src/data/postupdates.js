@@ -1,5 +1,12 @@
 module.exports = [
   {
+    title: "Updates: March 10, 2020",
+    content: [
+      "I added the disclaimer in 'Explore'."
+    ],
+    tags: ["updates"]
+  },
+  {
     title: "Updates: January 7, 2020",
     content: [
       "I added a footer.  Loading spinners were also added earlier in the month."

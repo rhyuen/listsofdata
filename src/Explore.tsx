@@ -9,6 +9,7 @@ import { StyledHeader } from "./StyledHeader";
 import { Filters } from "./Filters";
 import { Row } from "./Row";
 import { Cell } from "./Cell";
+import { Disclaimer } from "./Disclaimer";
 
 const Slant = styled.div`
   position: fixed;
@@ -50,13 +51,15 @@ interface State {
   subset: Array<Item>;
   year: string;
   month: string;
+  isDisclaimerVisible: boolean;
 }
 export class Explore extends React.Component<{}, State> {
   state = {
     data: fileData.me,
     subset: fileData.me,
     year: "None",
-    month: "None"
+    month: "None",
+    isDisclaimerVisible: true
   };
 
   handleChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
@@ -85,8 +88,18 @@ export class Explore extends React.Component<{}, State> {
     }
   };
 
+  handleCloseDisclaimer = () => {
+    //TODO: MR 10/2020 set a localstorage flag.
+    this.setState(ps => {
+      return {
+        ...ps,
+        isDisclaimerVisible: !ps.isDisclaimerVisible
+      }
+    })
+  }
+
   render() {
-    const { subset, data, year, month } = this.state;
+    const { subset, data, year, month, isDisclaimerVisible } = this.state;
     const months = [...new Set(data.map(item => Number(item.month)))];
     const years = [...new Set(data.map(item => Number(item.year)))];
     let max = 0;
@@ -100,6 +113,9 @@ export class Explore extends React.Component<{}, State> {
       <ExploreRoot>
         <Slant />
         <MainColumn>
+          {
+            isDisclaimerVisible ? <Disclaimer onClick={this.handleCloseDisclaimer} /> : null
+          }
           <Filters
             years={years}
             year={year}

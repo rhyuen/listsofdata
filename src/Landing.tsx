@@ -9,7 +9,9 @@ const PostBanner: React.FunctionComponent<{}> = styled.section`
   top: 55vh;
 `;
 const BannerText = styled.span`
+  font-size: 36px;
   letter-spacing: 10px;
+  user-select: none;
 `;
 
 const WIDTH = "1024px";
