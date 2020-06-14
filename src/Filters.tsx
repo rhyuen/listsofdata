@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Card } from "./Card";
 import styled from "styled-components";
+import { v4 } from "uuid";
 import { StyledHeader } from "./StyledHeader";
 
 const DropdownContainer = styled.div`
@@ -47,7 +48,7 @@ export const Filters: React.FunctionComponent<Props> = ({
           <select name="year" value={year} onChange={onChange}>
             <option value="None">None</option>
             {years.map(yr => (
-              <option value={yr}>{yr}</option>
+              <option key={v4()} value={yr}>{yr}</option>
             ))}
           </select>
         </DropdownContainer>
@@ -57,7 +58,7 @@ export const Filters: React.FunctionComponent<Props> = ({
           <select name="month" value={month} onChange={onChange}>
             <option value="None">None</option>
             {months.map(m => (
-              <option value={m}>{m}</option>
+              <option key={v4()} value={m}>{m}</option>
             ))}
           </select>
         </DropdownContainer>

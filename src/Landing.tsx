@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { FullBanner } from "./FullBanner";
 import { Card } from "./Card";
-import data from "./data/personaldata.json";
+import { v4 } from "uuid";
 
 const PostBanner: React.FunctionComponent<{}> = styled.section`
   position: relative;
@@ -104,7 +104,7 @@ export const Landing: React.FunctionComponent<Props> = () => {
         </Card>
         <Grid>
           {tileData.map((item: any) => (
-            <TileCard>
+            <TileCard key={v4()}>
               <TileHeader>{item.time}</TileHeader>
               <Figure>{item.number}</Figure>
               <FigCaption>{item.unit}</FigCaption>

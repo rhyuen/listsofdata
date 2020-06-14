@@ -3,6 +3,7 @@ import { Card } from "./Card";
 import { Row } from "./Row";
 import { Cell } from "./Cell";
 import styled from "styled-components";
+import { v4 } from "uuid";
 import { StyledHeader } from "./StyledHeader";
 
 const Column: React.FunctionComponent = styled.div`
@@ -48,7 +49,7 @@ export const Summary: React.FunctionComponent<Props> = ({ data }) => {
       <Row type="header" columns={numOfCols}>
         {Object.keys(summaryColumns).map(col => {
           return (
-            <Column>
+            <Column key={v4()}>
               <Cell>{col}</Cell>
             </Column>
           );
@@ -57,7 +58,7 @@ export const Summary: React.FunctionComponent<Props> = ({ data }) => {
       <Row type="header" columns={numOfCols}>
         {Object.values(summaryColumns).map(col => {
           return (
-            <Column>
+            <Column key={v4()}>
               <Cell>{col}</Cell>
             </Column>
           );

@@ -17,7 +17,8 @@
         "downlevelIteration": true,
         "types": [
             "jest",
-            "node"
+            "node",
+            "@testing-library/jest-dom"
         ],
         "lib": [
             "es5",

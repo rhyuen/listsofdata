@@ -142,7 +142,7 @@ export class Explore extends React.Component<{}, State> {
                   (subset[index - 1].month !== item.month ||
                     subset[index - 1].year !== item.year)
                 ) {
-                  console.log("New Month goes here %s", subset[index].month);
+                  //console.log("New Month goes here %s", subset[index].month);
                 }
 
                 return (
@@ -181,6 +181,14 @@ interface RowOfCellsProps {
   replicas: Item;
   maxReplicas: number;
 }
+
+
+const Gtr = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+`;
+
+
 const RowOfCells: React.FunctionComponent<RowOfCellsProps> = ({
   replicas,
   maxReplicas
@@ -190,10 +198,6 @@ const RowOfCells: React.FunctionComponent<RowOfCellsProps> = ({
 
   const arr = replicas.pushups.map(rep => rep.toString()).concat(paddedArray);
 
-  const Gtr = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
-  `;
 
   return (
     <Gtr>

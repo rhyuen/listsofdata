@@ -48,10 +48,10 @@ export const Nav: React.FunctionComponent<{}> = () => {
   return (
     <RootNav>
       <NavContainer>
-        <HomeLink to="/">JustCounting</HomeLink>
-        <StyledLink to="/explore">Explore</StyledLink>
-        <StyledLink to="/graph">Graph</StyledLink>
-        <StyledLink to="/blog/1">Blog</StyledLink>
+        <HomeLink to="/" data-testid="home">JustCounting</HomeLink>
+        <StyledLink to="/explore" data-testid="explore">Explore</StyledLink>
+        <StyledLink to="/graph" data-testid="graph">Graph</StyledLink>
+        <StyledLink to="/blog/1" data-testid="blog">Blog</StyledLink>
       </NavContainer>
     </RootNav>
   );
