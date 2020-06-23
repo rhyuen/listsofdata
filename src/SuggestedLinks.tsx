@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Cardless } from "./Cardless";
-import uuid from "uuid/v4";
+import { v4 } from "uuid";
 import { CardlessHeader } from "./CardlessHeader";
 import { StyledAnchor } from "./StyledAnchor";
 import { CardItem } from "./CardItem";
@@ -60,7 +60,7 @@ interface Props {
 const SuggestLinksList: React.FunctionComponent<Props> = (data) => {
   const result = data.input.map((datum: any) => {
     return (
-      <CardItem key={uuid()}>
+      <CardItem key={v4()}>
         <StyledAnchor href={datum.link}>{datum.title}</StyledAnchor>
         <Subtext>{datum.subtitle}</Subtext>
         <br />

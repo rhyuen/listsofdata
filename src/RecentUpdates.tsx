@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Cardless } from "./Cardless";
 import { CardlessHeader } from "./CardlessHeader";
-import uuid from "uuid/v4";
+import { v4 } from "uuid";
 import { CardItem } from "./CardItem";
 import { StyledAnchor } from "./StyledAnchor";
 import { Subtext } from "./Subtext";
@@ -77,7 +77,7 @@ const UpdatesItem: React.FunctionComponent<Props> = (data) => {
       const { display_login } = datum.actor;
       const { message, url } = datum.payload.commits[0];
       return (
-        <CardItem key={uuid()}>
+        <CardItem key={v4()}>
           <StyledAnchor href={url}>
             UPDATE by {display_login}
           </StyledAnchor>

@@ -4,7 +4,7 @@ import { Cardless } from "./Cardless";
 import { CardlessHeader } from "./CardlessHeader";
 import { StyledInput } from "./StyledTextInput";
 import { StyledSubmit } from "./StyledSubmit";
-import { isEmail } from "validator";
+import validator from "validator";
 import axios from "axios";
 
 
@@ -20,7 +20,7 @@ export const Subscribe: React.FunctionComponent<{}> = () => {
       updateValid(true);
     }
 
-    if (isEmail(value)) {
+    if (validator.isEmail(value)) {
       updateValid(true);
     } else {
       updateValid(false);

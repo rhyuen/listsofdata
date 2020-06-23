@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Summary } from "./Summary";
 import fileData from "./data/personaldata.json";
-import uuid from "uuid/v4";
+import { v4 } from "uuid";
 import { Card } from "./Card";
 import { SideColumn } from "./SideColumn";
 import { StyledHeader } from "./StyledHeader";
@@ -131,7 +131,7 @@ export class Explore extends React.Component<{}, State> {
               {Array(max)
                 .fill("", 0, max)
                 .map((_, index) => (
-                  <Cell key={uuid()}>Set {index + 1}</Cell>
+                  <Cell key={v4()}>Set {index + 1}</Cell>
                 ))}
               <Cell>Total</Cell>
             </Row>
@@ -146,7 +146,7 @@ export class Explore extends React.Component<{}, State> {
                 }
 
                 return (
-                  <Row key={uuid()} type="content">
+                  <Row key={v4()} type="content">
                     <RowOfCells replicas={item} maxReplicas={max} />
                   </Row>
                 );
@@ -207,9 +207,9 @@ const RowOfCells: React.FunctionComponent<RowOfCellsProps> = ({
         year={replicas.year}
       />
       {arr.map(subitem => (
-        <Cell key={uuid()}>{subitem}</Cell>
+        <Cell key={v4()}>{subitem}</Cell>
       ))}
-      <Cell key={uuid()}>{replicas.pushups.reduce((a, b) => a + b)}</Cell>
+      <Cell key={v4()}>{replicas.pushups.reduce((a, b) => a + b)}</Cell>
     </Gtr>
   );
 };

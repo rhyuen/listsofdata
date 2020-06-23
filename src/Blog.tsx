@@ -3,7 +3,7 @@ import { Slant, SlantContent, SlantOffset } from "./shared/Slant";
 import { Card } from "./Card";
 import { StyledHeader } from "./StyledHeader";
 import Posts from "./data/postupdates.js";
-import uuid from "uuid";
+import { v4 } from "uuid";
 
 // interface Props {
 //   match: {
@@ -30,10 +30,10 @@ export const Blog: React.FunctionComponent<{}> = () => {
       <SlantOffset>
         {Posts.map((post: Post, index: Number) => {
           return (
-            <Card key={uuid()}>
+            <Card key={v4()}>
               <StyledHeader>{post.title}</StyledHeader>
               {post.content.map(text => {
-                return <p key={uuid()}>{text}</p>;
+                return <p key={v4()}>{text}</p>;
               })}
             </Card>
           );
