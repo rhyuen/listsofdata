@@ -77,7 +77,6 @@
     "format": "prettier --write \"src/*.{js,jsx,css,json}\" ",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "test": "jest --collectCoverage=true --detectOpenHandles",
-    "dev:test": "jest --watch",
-    "postinstall": "rm -rf node_modules/@types/react-native"
+    "dev:test": "jest --watch"
   }
 }
