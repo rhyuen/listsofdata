@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import * as React from "react";
+import styled from "styled-components";
 import { Cardless } from "./Cardless";
 import { CardlessHeader } from "./CardlessHeader";
 import { StyledInput } from "./StyledTextInput";
@@ -6,63 +7,58 @@ import { StyledSubmit } from "./StyledSubmit";
 import { isEmail } from "validator";
 import axios from "axios";
 
-interface Props {}
-interface State {
-  email: string;
-  validEmail: boolean;
-}
-export class Subscribe extends React.Component<Props, State> {
-  state = {
-    email: "",
-    validEmail: true
-  };
 
-  handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+export const Subscribe: React.FunctionComponent<{}> = () => {
+  const [email, setEmail] = React.useState<string>("");
+  const [isValid, updateValid] = React.useState<boolean>(false);
+
+  const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
-    if (isEmail(value)) {
-      this.setState({
-        email: value,
-        validEmail: true
-      });
-    } else {
-      this.setState({
-        email: value,
-        validEmail: false
-      });
+
+    if (value === "") {
+      updateValid(true);
     }
+
+    if (isEmail(value)) {
+      updateValid(true);
+    } else {
+      updateValid(false);
+    }
+    setEmail(value);
+
   };
 
-  handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { email } = this.state;
-    if (this.isEmailValid()) {
+
+    const options = {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json"
+      },
+      withCredentials: true
+    };
+
+
+    if (isValid) {
       const emailURL =
         "https://nodetwofaas.netlify.com/.netlify/functions/createEmail";
       axios
         .post(
           emailURL,
           { email: email },
-          {
-            headers: {
-              "Access-Control-Allow-Origin": "*",
-              "Content-Type": "application/json"
-            },
-            withCredentials: true
-          }
+          options
         )
         .then(res => {
           console.log("Email Submission Success");
           console.log(res.data);
         })
         .catch(e => {
-          console.log("Errors abound.");
+          console.log("Email errors abound.");
           console.log(e);
         })
-        .finally(() => {
-          this.setState({
-            email: ""
-          });
-        });
+
     } else {
       //TODO: Add caption that says invalid emaiul.
       console.log(
@@ -71,30 +67,33 @@ export class Subscribe extends React.Component<Props, State> {
     }
   };
 
-  isEmailValid = () => {
-    const { email } = this.state;
-    console.log(email);
-    console.log(`${isEmail(email)} is the value.`);
-    return isEmail(email);
-  };
-  render() {
-    const { email } = this.state;
-    return (
-      <Cardless>
-        <CardlessHeader>Subscribe</CardlessHeader>
-        <section>
-          <form onSubmit={this.handleSubmit}>
-            <StyledInput
-              type="text"
-              placeholder="email@myemail.ca"
-              name="email"
-              onChange={this.handleTextChange}
-              value={email}
-            />
-            <StyledSubmit type="submit" disabled={!this.state.validEmail} />
-          </form>
-        </section>
-      </Cardless>
-    );
-  }
+
+  return (
+    <Cardless>
+      <CardlessHeader>Subscribe</CardlessHeader>
+      <section>
+        <form onSubmit={handleSubmit}>
+          <StyledInput
+            type="text"
+            placeholder="email@myemail.ca"
+            name="email"
+            onChange={handleTextChange}
+            value={email}
+          />
+          <StyledSubmit type="submit" data-testid="email_submit" disabled={!isValid} />
+        </form>
+        {isValid || email === "" ? null : <WarningText>Invalid Email</WarningText>}
+      </section>
+    </Cardless>
+  );
 }
+
+const WarningText = styled.div`
+  margin-top: 10px;
+  border: 2px solid black;
+  color: black;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 5px 15px;
+  width: fit-content;
+`;

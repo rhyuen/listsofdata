@@ -7,6 +7,9 @@ Just some react stuff with data in it.
 A project that I ended up sticking with despite, initially, having written it in a manner that suggested the opposite.
 
 
+**JUNE 22, 2020**
+Added Test for Submit form.
+
 **MR 10, 2020**
 Added a disclaimer to the 'Explore' Tab so people know what I'm counting: pushups.   Yes, it's conceited and kind of silly.
 
