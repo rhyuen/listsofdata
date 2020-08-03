@@ -52,7 +52,7 @@ export const Footer: React.FunctionComponent<{}> = () => {
       <ScrollFooterEl onClick={handleClick}>top</ScrollFooterEl>
       <FooterEl>
         Last updated <br />
-        MAY 15,2020
+        AUG 3,2020
       </FooterEl>
     </StyledFooter>
   );

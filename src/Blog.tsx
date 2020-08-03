@@ -15,7 +15,7 @@ import { v4 } from "uuid";
 
 type Post = {
   title: string;
-  content: Array<String>;
+  content: Array<string>;
   tags: Array<string>;
 };
 
@@ -28,7 +28,7 @@ export const Blog: React.FunctionComponent<{}> = () => {
         </SlantContent>
       </Slant>
       <SlantOffset>
-        {Posts.map((post: Post, index: Number) => {
+        {Posts.map((post: Post) => {
           return (
             <Card key={v4()}>
               <StyledHeader>{post.title}</StyledHeader>
